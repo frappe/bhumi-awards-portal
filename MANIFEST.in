@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bhumi_awards_portal *.css
+recursive-include bhumi_awards_portal *.csv
+recursive-include bhumi_awards_portal *.html
+recursive-include bhumi_awards_portal *.ico
+recursive-include bhumi_awards_portal *.js
+recursive-include bhumi_awards_portal *.json
+recursive-include bhumi_awards_portal *.md
+recursive-include bhumi_awards_portal *.png
+recursive-include bhumi_awards_portal *.py
+recursive-include bhumi_awards_portal *.svg
+recursive-include bhumi_awards_portal *.txt
+recursive-exclude bhumi_awards_portal *.pyc
