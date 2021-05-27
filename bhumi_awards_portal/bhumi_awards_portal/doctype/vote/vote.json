@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2021-05-27 17:08:03.979912",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "college",
+  "association_with_college",
+  "reason_for_nomination",
+  "voter_contact",
+  "voter_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "college",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "College",
+   "options": "College",
+   "reqd": 1
+  },
+  {
+   "fieldname": "association_with_college",
+   "fieldtype": "Select",
+   "label": "Association with College",
+   "options": "Current Student\nStudent Alumni\nCurrent Staff\nStaff Alumni\nNot Directly Associated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_for_nomination",
+   "fieldtype": "Long Text",
+   "label": "Reason for Nomination"
+  },
+  {
+   "fieldname": "voter_contact",
+   "fieldtype": "Data",
+   "label": "Voter Contact",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "voter_name",
+   "fieldtype": "Data",
+   "label": "Voter Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-05-27 17:29:11.794287",
+ "modified_by": "Administrator",
+ "module": "Bhumi Awards Portal",
+ "name": "Vote",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
