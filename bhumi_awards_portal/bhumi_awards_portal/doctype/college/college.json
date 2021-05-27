@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "college_name",
-  "location"
+  "location",
+  "total_votes"
  ],
  "fields": [
   {
@@ -24,11 +25,18 @@
    "in_list_view": 1,
    "label": "Location",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_votes",
+   "fieldtype": "Int",
+   "label": "Total Votes",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-27 15:20:54.508891",
+ "modified": "2021-05-27 16:55:35.741915",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
