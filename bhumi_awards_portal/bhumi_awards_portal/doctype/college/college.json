@@ -31,12 +31,13 @@
    "fieldname": "total_votes",
    "fieldtype": "Int",
    "label": "Total Votes",
-   "non_negative": 1
+   "non_negative": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-27 16:55:35.741915",
+ "modified": "2021-05-28 15:41:03.998837",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
