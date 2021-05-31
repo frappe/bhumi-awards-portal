@@ -11,7 +11,11 @@ class Vote(Document):
 		all_voters = set(frappe.get_all('Vote', pluck='voter'))
 		if self.voter in all_voters:
 			frappe.throw('You have already voted!')
-	
+
+	def before_save(self):
+		voter = frappe.get_doc('User', self.voter)
+		self.voter_name = voter.full_name
+		
 	def after_insert(self):
 		# Increase the vote count for this particular college
 		self.increment_vote_count()
