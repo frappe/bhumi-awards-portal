@@ -1,1 +1,13 @@
-<h2>College Listing</h2>
+<h2 class="mx-auto text-center">College Listing</h2>
+
+{% set colleges = frappe.get_all('College', fields=['college_name', 'location']) %}
+
+{% for college in colleges %}
+    <div class="card w-25">
+        <div class="card-body text-center">
+        <h5 class="card-title">{{ college.college_name }}</h5>
+        <p class="card-text">{{ college.location }}</p>
+        <a href="#" class="btn btn-primary">Vote Now</a>
+        </div>
+    </div>
+{% endfor %}
