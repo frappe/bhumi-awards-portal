@@ -5,30 +5,35 @@ import frappe
 import unittest
 
 class TestVote(unittest.TestCase):
-	def test_vote_increment(self):
+	def setUp(self):
 		# Create a test college
-		test_college = frappe.get_doc({
+		self.test_college = frappe.get_doc({
 			'doctype': 'College',
 			'college_name': 'test college 1',
 			'location': 'test location'
 		}).insert(ignore_permissions=True)
-
+	
+	def tearDown(self):
+		self.test_college.delete()
+	
+	def test_vote_increment(self):
 		# Default should be 0
-		self.assertEqual(test_college.total_votes, 0)
+		self.assertEqual(self.test_college.total_votes, 0)
 
 		# Cast a vote
 		test_vote = frappe.get_doc({
 			'doctype': 'Vote',
-			'college': test_college.name,
+			'college': self.test_college.name,
 			'voter_contact': '8776554534',
 			'voter': 'Administrator'
 		}).insert(ignore_permissions=True)
 
 		# Reload college document
-		test_college.reload()
+		self.test_college.reload()
 
 		# Vote count should increment
-		self.assertEqual(test_college.total_votes, 1)
+		self.assertEqual(self.test_college.total_votes, 1)
 
+		# Delete the vote
 		test_vote.delete()
-		test_college.delete()
+		
