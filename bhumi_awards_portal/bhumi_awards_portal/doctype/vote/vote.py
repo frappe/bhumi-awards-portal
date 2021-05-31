@@ -6,6 +6,7 @@ from frappe.model.document import Document
 
 class Vote(Document):
 	def validate(self):
+		self.set_voter()
 		self.validate_single_vote()
 		
 	def validate_single_vote(self):
@@ -15,6 +16,13 @@ class Vote(Document):
 			frappe.throw('You have already voted!')
 
 	def before_save(self):
+		self.set_voter_name()
+
+	def set_voter(self):
+		if not self.voter:
+			self.voter = frappe.session.user
+
+	def set_voter_name(self):
 		voter = frappe.get_doc('User', self.voter)
 		self.voter_name = voter.full_name
 

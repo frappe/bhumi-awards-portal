@@ -36,8 +36,7 @@ class TestVote(unittest.TestCase):
 		test_vote = frappe.get_doc({
 			'doctype': 'Vote',
 			'college': college_name,
-			'voter_contact': '8776554534',
-			'voter': 'Administrator'
+			'voter_contact': '8776554534'
 		}).insert(ignore_permissions=True)
 
 		return test_vote

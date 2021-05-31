@@ -50,13 +50,12 @@
    "fieldname": "voter",
    "fieldtype": "Link",
    "label": "Voter",
-   "options": "User",
-   "reqd": 1
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-31 13:45:47.014455",
+ "modified": "2021-05-31 15:00:03.307866",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Vote",
