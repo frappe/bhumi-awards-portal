@@ -18,7 +18,7 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-05-31 13:11:37.234145",
+ "modified": "2021-05-31 16:18:35.737443",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "vote",
@@ -63,6 +63,18 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "fieldname": "reason_for_nomination",
+   "fieldtype": "Text",
+   "hidden": 0,
+   "label": "Reason for Nomination",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
    "fieldname": "voter_contact",
    "fieldtype": "Data",
    "hidden": 0,
@@ -83,6 +95,19 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 1,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "voter",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Voter",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "User",
+   "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
   }

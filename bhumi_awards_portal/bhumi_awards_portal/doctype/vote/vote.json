@@ -29,6 +29,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "reason_for_nomination",
    "fieldtype": "Long Text",
    "label": "Reason for Nomination"
@@ -55,7 +56,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-31 15:00:03.307866",
+ "modified": "2021-05-31 16:17:46.556483",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Vote",
