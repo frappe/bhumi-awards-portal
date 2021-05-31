@@ -5,6 +5,12 @@ import frappe
 import unittest
 
 class TestVote(unittest.TestCase):
+	@classmethod
+	def setUpClass(cls):
+		# Delete all colleges and votes
+		frappe.db.sql("DELETE FROM `tabVote`")
+		frappe.db.sql("DELETE FROM `tabCollege`")
+
 	def setUp(self):
 		# Create a test college
 		self.test_college = frappe.get_doc({
