@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "COL.######",
+ "autoname": "field:college_name",
  "creation": "2021-05-27 15:19:11.144822",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -17,7 +17,8 @@
    "in_list_view": 1,
    "label": "College Name",
    "options": "Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "location",
@@ -37,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-28 15:41:03.998837",
+ "modified": "2021-05-31 13:05:30.935561",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
