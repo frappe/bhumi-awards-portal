@@ -9,7 +9,7 @@ class TestVote(unittest.TestCase):
 		# Create a test college
 		self.test_college = frappe.get_doc({
 			'doctype': 'College',
-			'college_name': 'test college 1',
+			'college_name': 'test college for vote',
 			'location': 'test location'
 		}).insert(ignore_permissions=True)
 	
@@ -21,12 +21,7 @@ class TestVote(unittest.TestCase):
 		self.assertEqual(self.test_college.total_votes, 0)
 
 		# Cast a vote
-		test_vote = frappe.get_doc({
-			'doctype': 'Vote',
-			'college': self.test_college.name,
-			'voter_contact': '8776554534',
-			'voter': 'Administrator'
-		}).insert(ignore_permissions=True)
+		test_vote = self.create_vote(self.test_college.name)
 
 		# Reload college document
 		self.test_college.reload()
@@ -36,4 +31,25 @@ class TestVote(unittest.TestCase):
 
 		# Delete the vote
 		test_vote.delete()
+	
+	def create_vote(self, college_name):
+		test_vote = frappe.get_doc({
+			'doctype': 'Vote',
+			'college': college_name,
+			'voter_contact': '8776554534',
+			'voter': 'Administrator'
+		}).insert(ignore_permissions=True)
+
+		return test_vote
+
+	def test_vote_decrement(self):
+		test_vote = self.create_vote(self.test_college.name)
 		
+		# Should be 1 after a single vote
+		self.test_college.reload()
+		self.assertEqual(self.test_college.total_votes, 1)
+		
+		# Should be 0 after vote deletion
+		test_vote.delete()
+		self.test_college.reload()
+		self.assertEqual(self.test_college.total_votes, 0)
