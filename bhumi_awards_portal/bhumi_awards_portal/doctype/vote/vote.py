@@ -6,8 +6,10 @@ from frappe.model.document import Document
 
 class Vote(Document):
 	def validate(self):
-		# The voter should not have voted before
-		# Get all previous voters
+		self.validate_single_vote()
+		
+	def validate_single_vote(self):
+		'''A voter can only vote once'''
 		all_voters = set(frappe.get_all('Vote', pluck='voter'))
 		if self.voter in all_voters:
 			frappe.throw('You have already voted!')
@@ -15,7 +17,7 @@ class Vote(Document):
 	def before_save(self):
 		voter = frappe.get_doc('User', self.voter)
 		self.voter_name = voter.full_name
-		
+
 	def after_insert(self):
 		# Increase the vote count for this particular college
 		self.increment_vote_count()
