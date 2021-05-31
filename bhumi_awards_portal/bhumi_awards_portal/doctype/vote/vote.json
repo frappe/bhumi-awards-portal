@@ -9,7 +9,8 @@
   "association_with_college",
   "reason_for_nomination",
   "voter_contact",
-  "voter_name"
+  "voter_name",
+  "voter"
  ],
  "fields": [
   {
@@ -44,11 +45,17 @@
    "fieldtype": "Data",
    "label": "Voter Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "voter",
+   "fieldtype": "Link",
+   "label": "Voter",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-27 17:29:11.794287",
+ "modified": "2021-05-31 13:15:46.740422",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Vote",
