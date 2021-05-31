@@ -26,3 +26,11 @@ class Vote(Document):
 		college = frappe.get_doc('College', self.college)
 		college.total_votes = college.total_votes + 1
 		college.save()
+	
+	def on_trash(self):
+		self.decrement_vote_count()
+
+	def decrement_vote_count(self):
+		college = frappe.get_doc('College', self.college)
+		college.total_votes = college.total_votes - 1
+		college.save()
