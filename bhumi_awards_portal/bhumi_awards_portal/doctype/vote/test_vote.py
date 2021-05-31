@@ -53,3 +53,8 @@ class TestVote(unittest.TestCase):
 		test_vote.delete()
 		self.test_college.reload()
 		self.assertEqual(self.test_college.total_votes, 0)
+	
+	def test_single_vote(self):
+		test_vote = self.create_vote(self.test_college.name)
+		self.assertRaises(frappe.ValidationError, self.create_vote, self.test_college.name)
+		test_vote.delete()
