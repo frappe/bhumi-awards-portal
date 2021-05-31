@@ -30,4 +30,4 @@ class TestVote(unittest.TestCase):
 		self.assertEqual(test_college.total_votes, 1)
 
 		test_vote.delete()
-		test_college.delete( )
+		test_college.delete()
