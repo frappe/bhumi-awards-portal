@@ -9,6 +9,13 @@ app_color = "grey"
 app_email = "t4c@bhumi.ngo"
 app_license = "MIT"
 
+
+# Fixtures 
+fixtures = [
+    # export all records from the Category table
+    "Website Settings"
+]
+
 # Includes in <head>
 # ------------------
 
