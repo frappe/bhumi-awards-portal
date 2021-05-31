@@ -21,7 +21,7 @@ app_license = "MIT"
 # web_include_js = "/assets/bhumi_awards_portal/js/bhumi_awards_portal.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "bhumi_awards_portal/public/scss/website"
+website_theme_scss = "bhumi_awards_portal/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
