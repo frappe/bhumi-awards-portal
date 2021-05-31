@@ -9,7 +9,7 @@ class TestVote(unittest.TestCase):
 		# Create a test college
 		test_college = frappe.get_doc({
 			'doctype': 'College',
-			'college_name': 'test college 0',
+			'college_name': 'test college 1',
 			'location': 'test location'
 		}).insert(ignore_permissions=True)
 
@@ -20,7 +20,8 @@ class TestVote(unittest.TestCase):
 		test_vote = frappe.get_doc({
 			'doctype': 'Vote',
 			'college': test_college.name,
-			'voter_contact': '8776554534'
+			'voter_contact': '8776554534',
+			'voter': 'Administrator'
 		}).insert(ignore_permissions=True)
 
 		# Reload college document
