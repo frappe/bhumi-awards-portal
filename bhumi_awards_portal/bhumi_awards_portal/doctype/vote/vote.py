@@ -5,6 +5,13 @@ import frappe
 from frappe.model.document import Document
 
 class Vote(Document):
+	def validate(self):
+		# The voter should not have voted before
+		# Get all previous voters
+		all_voters = set(frappe.get_all('Vote', pluck='voter'))
+		if self.voter in all_voters:
+			frappe.throw('You have already voted!')
+	
 	def after_insert(self):
 		# Increase the vote count for this particular college
 		self.increment_vote_count()
