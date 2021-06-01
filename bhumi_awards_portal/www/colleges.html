@@ -1,14 +1,24 @@
 <h2 class="mx-auto text-center">College Listing</h2>
 
-{% set colleges = frappe.get_all('College', fields=['college_name', 'location']) %}
+{% set colleges = frappe.get_all('College', fields=['college_name', 'location', 'total_votes']) %}
 
 {% for college in colleges %}
     <div class="card w-25">
         <div class="card-body text-center">
             <div class="mx-auto mb-3 rounded-circle bg-success text-white d-flex align-items-center display-4 justify-content-center" style="height: 100px; width: 100px;">{{ frappe.utils.get_abbr(college.college_name) }}</div>
             <h5 class="card-title font-weight-bold">{{ college.college_name }}</h5>
-            <p class="card-text">{{ college.location }}</p>
-            <a href="#" class="btn btn-primary">Vote Now</a>
+            <p class="card-text d-block mb-4">{{ college.location }}</p>
+            <div class="d-flex justify-content-between align-items-center mt-5 pt-2">
+                <p class="m-0 p-0">
+                    {{ college.total_votes }}
+                    {% if college.total_votes == 1 %} 
+                        vote
+                    {% else %}
+                        votes
+                    {% endif %}
+                </p>
+                <a href="/vote" class="btn btn-primary">Vote Now</a>
+            </div>
         </div>
     </div>
 {% endfor %}
