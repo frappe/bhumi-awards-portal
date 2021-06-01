@@ -4,3 +4,6 @@
 *.swp
 tags
 bhumi_awards_portal/docs/current
+node_modules/
+bhumi_awards_portal/public/dist/
+bhumi_awards_portal/public/node_modules
