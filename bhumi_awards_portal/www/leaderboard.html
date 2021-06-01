@@ -1,1 +1,21 @@
-<h2>Leaderboard</h2>
+<h2 class="mx-auto my-3 text-center">Leaderboard</h2>
+
+<!-- Plan
+1. Frappe Chart -> Bar chart showing Top 10 colleges
+2. Total Vote Count 
+3. Realtime leaderboard -> College list sorted by votes
+4. Filtering
+-->
+
+<!-- For Realtime Leaderboard -->
+<!-- 
+    On back-end: 
+        from frappe.realtime import publish_realtime
+        publish_realtime('<event-name>', payload_json)
+    On front-end: 
+        frappe.realtime.on('<event-name>', (payload) => {...});
+ -->
+
+{% block script %}
+    {{ include_script('colleges.bundle.js') }}
+{% endblock %}
