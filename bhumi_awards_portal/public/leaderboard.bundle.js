@@ -2,13 +2,14 @@ import { Chart } from 'frappe-charts';
 
 new Chart("#leaderboard-chart", {
     data: {
-        labels: ["IIT Bombay", "IIT Kanpur", "NIT Raipur"],
+        labels: ["IIT Bombay", "IIT Kanpur", "NIT Raipur", "Punjab University of Arts"],
         datasets: [
             {
                 "name": "College",
-                "values": [10, 20, 30]
+                "values": [10, 20, 30, 100]
             }
         ]
     },
-    type: "bar"
+    type: "bar",
+    colors: ["#e28b22"]
 });
