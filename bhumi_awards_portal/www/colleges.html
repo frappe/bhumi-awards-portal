@@ -3,8 +3,23 @@
 <h2 class="mx-auto my-3 text-center">College Listing</h2>
     
 <div class="row m-0 p-0">
-    <div class="container col-lg-2 my-3">
-        Filters will go here.
+    <div class="container col-lg-2 my-3 p-0">
+        <div class="form-group">
+            <label for="input-search">Search College</label>
+            <input type="text" class="form-control" id="input-search" placeholder="Enter college name">
+        </div>
+        <div class="form-group">
+            <label for="input-sort">Sort By</label>
+            <select name="input-sort" id="input-sort" class="form-control">
+                <option value="votes" selected># of votes</option>
+                <option value="college-name">College Name</option>
+                <option value="college-location">College Location</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="input-filter-location">Filter By Location</label>
+            <input type="text" class="form-control" id="input-filter-location" placeholder="Enter location">
+        </div>
     </div>
     
     <main class="col-lg-10">
