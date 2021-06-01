@@ -5,9 +5,10 @@
 {% for college in colleges %}
     <div class="card w-25">
         <div class="card-body text-center">
-        <h5 class="card-title">{{ college.college_name }}</h5>
-        <p class="card-text">{{ college.location }}</p>
-        <a href="#" class="btn btn-primary">Vote Now</a>
+            <div class="mx-auto mb-3 rounded-circle bg-success text-white d-flex align-items-center display-4 justify-content-center" style="height: 100px; width: 100px;">{{ frappe.utils.get_abbr(college.college_name) }}</div>
+            <h5 class="card-title font-weight-bold">{{ college.college_name }}</h5>
+            <p class="card-text">{{ college.location }}</p>
+            <a href="#" class="btn btn-primary">Vote Now</a>
         </div>
     </div>
 {% endfor %}
