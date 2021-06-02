@@ -7,19 +7,14 @@
 4. Filtering
 -->
 
-<div id="leaderboard-chart">
-    
+<div id="leaderboard-chart"></div>
+
+<div class="container text-center">
+    <h2 class="text-uppercase">Total Votes</h2>
+    <p class="display-1">{{ frappe.get_all('Vote') | length }}</p>
 </div>
 
-<!-- For Realtime Leaderboard -->
-<!-- 
-    On back-end: 
-        from frappe.realtime import publish_realtime
-        publish_realtime('<event-name>', payload_json)
-    On front-end: 
-        frappe.realtime.on('<event-name>', (payload) => {...});
- -->
-
+<!-- Add a refresh button to refresh the table -->
 {% block script %}
     {{ include_script('leaderboard.bundle.js') }}
 {% endblock %}
