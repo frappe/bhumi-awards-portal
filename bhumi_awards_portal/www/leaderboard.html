@@ -7,11 +7,19 @@
 4. Filtering
 -->
 
-<div id="leaderboard-chart"></div>
-
-<div class="container text-center">
-    <h2 class="text-uppercase">Total Votes</h2>
-    <p class="display-1">{{ frappe.get_all('Vote') | length }}</p>
+<div class="container">
+    <div id="leaderboard-chart"></div>
+    
+    <div class="d-flex flex-column text-center">
+        <h2 class="text-uppercase">Total Votes</h2>
+        <p class="display-1">{{ frappe.get_all('Vote') | length }}</p>
+    </div>
+    
+    
+    <div class="d-flex justify-content-between">
+        <input type="text" class="form-control w-25" placeholder="Search College">
+        <a role="button" href="/vote" class="btn btn-primary text-upper">Vote Now</a>
+    </div>
 </div>
 
 <!-- Add a refresh button to refresh the table -->
