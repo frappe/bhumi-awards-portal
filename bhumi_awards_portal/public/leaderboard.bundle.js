@@ -1,15 +1,8 @@
 import { Chart } from 'frappe-charts';
 
-new Chart("#leaderboard-chart", {
-    data: {
-        labels: ["IIT Bombay", "IIT Kanpur", "NIT Raipur", "Punjab University of Arts"],
-        datasets: [
-            {
-                "name": "College",
-                "values": [10, 20, 30, 100]
-            }
-        ]
-    },
+// Empty chart
+const votesChart = new Chart("#leaderboard-chart", {
+    data: {},
     type: "bar",
     colors: ["#e28b22"]
 });
@@ -23,7 +16,9 @@ const refreshButton = document.getElementById('refresh-button');
 const pageLimitButtons = document.getElementsByClassName('page-limit-button');
 
 refreshButton.addEventListener('click', (e) => {
+    refreshChart();
     refreshTable(nOfColleges, '');
+
 });
 
 for (let b of pageLimitButtons) {
@@ -81,4 +76,15 @@ function populateRankTable(collegeData) {
     rankTableBody.innerHTML = html;
 }
 
+function refreshChart() {
+    // Fetch and populate chart
+    frappe.call({
+        method: 'bhumi_awards_portal.api.get_chart_data',
+        callback: ({message}) => {
+          votesChart.update(message);
+        }
+    });
+}
+
+refreshChart();
 refreshTable(nOfColleges, '');
