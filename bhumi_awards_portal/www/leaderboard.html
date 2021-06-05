@@ -18,7 +18,10 @@
     
     <div class="d-flex justify-content-between">
         <input type="text" class="form-control w-25" placeholder="Search College">
-        <a role="button" href="/vote" class="btn btn-primary text-upper">Vote Now</a>
+        <div>
+          <button id="refresh-button" class="btn btn-secondary">Refresh</button>
+          <a role="button" href="/vote" class="btn btn-primary text-upper">Vote Now</a>
+        </div>
     </div>
 
     <table id="rank-table" class="table mt-5">
@@ -31,12 +34,7 @@
           </tr>
         </thead>
         <tbody id="rank-table-body">
-          <tr>
-            <th scope="row">1</th>
-            <td>IIT Bombay</td>
-            <td>544</td>
-            <td>Mumbai, MH</td>
-          </tr>
+          <!-- Will be populated by JS -->
         </tbody>
       </table>
     

@@ -14,18 +14,26 @@ new Chart("#leaderboard-chart", {
     colors: ["#e28b22"]
 });
 
+// Global variables
+let nOfColleges = 10;
+
 // DOM elements
 const rankTableBody = document.getElementById('rank-table-body');
+const refreshButton = document.getElementById('refresh-button');
 const pageLimitButtons = document.getElementsByClassName('page-limit-button');
+
+refreshButton.addEventListener('click', (e) => {
+    refreshTable(nOfColleges, '');
+});
 
 for (let b of pageLimitButtons) {
     b.addEventListener('click', (e) => {
-        const numCollegesToDisplay = e.target.innerHTML;
+        nOfColleges = e.target.innerHTML;
 
-        if (numCollegesToDisplay == 'ALL') {
+        if (nOfColleges == 'ALL') {
             refreshTable();
         } else {
-            refreshTable(parseInt(numCollegesToDisplay));
+            refreshTable(parseInt(nOfColleges));
         }
 
         // Remove 'active' class from all buttons
@@ -73,4 +81,4 @@ function populateRankTable(collegeData) {
     rankTableBody.innerHTML = html;
 }
 
-refreshTable(10, '');
+refreshTable(nOfColleges, '');
