@@ -14,9 +14,24 @@ new Chart("#leaderboard-chart", {
     colors: ["#e28b22"]
 });
 
+// DOM elements
+const rankTableBody = document.getElementById('rank-table-body');
 
 function populateRankTable(collegeData) {
-    
+    let html = '';
+
+    for (college of collegeData) {
+        let rowHTML = `<tr>
+            <th scope="row">${college.rank}</th>
+            <td>${college.name}</td>
+            <td>${college.total_votes}</td>
+            <td>${college.location}</td>
+          </tr>`;
+        
+          html += rowHTML;
+    }
+
+    rankTableBody.innerHTML = html;
 }
 
 frappe.call({
