@@ -13,3 +13,15 @@ new Chart("#leaderboard-chart", {
     type: "bar",
     colors: ["#e28b22"]
 });
+
+
+function populateRankTable(collegeData) {
+    
+}
+
+frappe.call({
+    method: 'bhumi_awards_portal.api.get_colleges_by_rank',
+    callback: (data) => {
+      populateRankTable(data.message);
+    }
+});
