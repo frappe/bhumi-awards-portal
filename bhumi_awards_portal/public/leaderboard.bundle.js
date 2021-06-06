@@ -3,10 +3,7 @@ import { Chart } from 'frappe-charts';
 // Empty chart
 const votesChart = new Chart("#leaderboard-chart", {
     data: {
-        datasets: [{
-            name: "",
-            values: []
-        }],
+        datasets: [],
         labels: []
     },
     type: "bar",
@@ -97,5 +94,6 @@ function refreshChart() {
     });
 }
 
+// First Load
 refreshChart();
 refreshTable(nOfColleges, '');
