@@ -2,7 +2,13 @@ import { Chart } from 'frappe-charts';
 
 // Empty chart
 const votesChart = new Chart("#leaderboard-chart", {
-    data: {},
+    data: {
+        datasets: [{
+            name: "",
+            values: []
+        }],
+        labels: []
+    },
     type: "bar",
     colors: ["#e28b22"]
 });
@@ -12,13 +18,18 @@ let nOfColleges = 10;
 
 // DOM elements
 const rankTableBody = document.getElementById('rank-table-body');
+const searchInput = document.getElementById('search-input');
 const refreshButton = document.getElementById('refresh-button');
 const pageLimitButtons = document.getElementsByClassName('page-limit-button');
+
+searchInput.addEventListener('input', (e) => {
+    const inputQuery = e.target.value;
+    refreshTable(nOfColleges, inputQuery);
+});
 
 refreshButton.addEventListener('click', (e) => {
     refreshChart();
     refreshTable(nOfColleges, '');
-
 });
 
 for (let b of pageLimitButtons) {
