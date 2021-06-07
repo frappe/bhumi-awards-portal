@@ -1,6 +1,9 @@
 // DOM elements
 const collegeListings = document.getElementById("college-listings");
 const loadMoreButton = document.getElementById("load-more-button");
+const inputNameSearch = document.getElementById("input-name-search");
+const inputLocationSearch = document.getElementById("input-location-search");
+const inputSort = document.getElementById("input-sort");
 
 // Global variables
 let pageStart = 30;
@@ -12,6 +15,17 @@ let filters = {
 	sortBy: "total_votes",
 	sortOrder: "desc",
 };
+
+// Event Listeners
+inputNameSearch.addEventListener("input", (e) => {
+	filters.nameQuery = e.target.value;
+    resetState();
+    loadNextPage();
+});
+
+inputLocationSearch.addEventListener("input", (e) => {});
+
+inputSort.addEventListener("input", (e) => {});
 
 loadMoreButton.addEventListener("click", (e) => {
 	loadNextPage();
@@ -28,7 +42,7 @@ function loadNextPage() {
 		},
 		callback: ({ message }) => {
 			appendToListings(message);
-			// pageStart += pageLimit;
+			pageStart += pageLimit;
 		},
 	});
 }
@@ -72,5 +86,7 @@ function toggleLoadButton(visible = true) {
 }
 
 function resetState() {
-	toggleLoadButton(false);
+    collegeListings.innerHTML = "";
+	pageStart = 0;
+	pageLimit = 30;
 }
