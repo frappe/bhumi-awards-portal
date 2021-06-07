@@ -1,1 +1,5 @@
-console.log('college js loaded');
+const loadMoreButton = document.getElementById("load-more-button");
+
+loadMoreButton.addEventListener("click", (e) => {
+    
+});
