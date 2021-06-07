@@ -15,7 +15,7 @@
         <input id="search-input" type="text" class="form-control w-25" placeholder="Search College">
         <div>
           <button id="refresh-button" class="btn btn-secondary">
-            <svg class="icon icon-md">
+            <svg id="refresh-button-icon" class="icon icon-md">
 							<use xlink:href="#icon-refresh"></use>
 						</svg>
           </button>
@@ -46,6 +46,27 @@
         </ul>
       </nav>
 </div>
+
+{% block style %}
+<style>
+  /* https://codepen.io/teerapuch/pen/vLJXeR */
+  .spin {
+    animation-name: spin;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+  }
+
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+</style>
+{% endblock %}
 
 <!-- Add a refresh button to refresh the table -->
 {% block script %}

@@ -17,6 +17,7 @@ let nOfColleges = 10;
 const rankTableBody = document.getElementById('rank-table-body');
 const searchInput = document.getElementById('search-input');
 const refreshButton = document.getElementById('refresh-button');
+const refreshButtonIcon = document.getElementById('refresh-button-icon');
 const pageLimitButtons = document.getElementsByClassName('page-limit-button');
 
 searchInput.addEventListener('input', (e) => {
@@ -25,8 +26,9 @@ searchInput.addEventListener('input', (e) => {
 });
 
 refreshButton.addEventListener('click', (e) => {
+    refreshButtonIcon.classList.add('spin'); // Start spinning
     refreshChart();
-    refreshTable(nOfColleges, '');
+    refreshTable(nOfColleges, '').then(() => refreshButtonIcon.classList.remove('spin'));
 });
 
 for (let b of pageLimitButtons) {
@@ -58,7 +60,7 @@ function refreshTable(nOfColleges=null, nameQuery='') {
         args.name_query = nameQuery;
     }
 
-    frappe.call({
+    return frappe.call({
         method: 'bhumi_awards_portal.api.get_colleges_by_rank',
         args: args,
         callback: (data) => {
