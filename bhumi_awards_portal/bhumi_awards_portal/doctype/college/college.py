@@ -28,4 +28,26 @@ class College(Document):
 
 		return colleges
 
+	@staticmethod
+	def get_paginated(limit_start=0, limit_page_length=30, order_by=None, location_query=None, name_query=None):
+		if order_by is None:
+			order_by = 'total_votes desc'
+		
+		filters = {}
 
+		if name_query:
+			filters['name'] = ('like', f'%{name_query}%')
+		
+		if location_query:
+			filters['location'] = ('like', f'%{location_query}%')
+
+		colleges = frappe.get_all(
+			'College', 
+			fields=['name', 'total_votes', 'location'],
+			filters=filters,
+			order_by=order_by,
+			limit_start=limit_start,
+			limit_page_length=limit_page_length
+		)
+		
+		return colleges
