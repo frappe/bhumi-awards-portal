@@ -1,9 +1,6 @@
 // DOM elements
 const collegeListings = document.getElementById("college-listings");
 const loadMoreButton = document.getElementById("load-more-button");
-const inputNameSearch = document.getElementById("input-name-search");
-const inputLocationSearch = document.getElementById("input-location-search");
-const inputSort = document.getElementById("input-sort");
 
 // Global variables
 let pageStart = 30;
@@ -16,16 +13,29 @@ let filters = {
 	sortOrder: "desc",
 };
 
+const filterInputs = [
+	{ ele: document.getElementById("input-name-search"), key: "nameQuery" },
+	{
+		ele: document.getElementById("input-location-search"),
+		key: "locationQuery",
+	},
+	{ ele: document.getElementById("input-sort"), key: "sortBy" },
+];
+
 // Event Listeners
-inputNameSearch.addEventListener("input", (e) => {
-	filters.nameQuery = e.target.value;
-    resetState();
-    loadNextPage();
-});
+for (let input of filterInputs) {
+	input.ele.addEventListener("input", (e) => {
+		filters[input.key] = e.target.value;
 
-inputLocationSearch.addEventListener("input", (e) => {});
+		if (input.key === "sortBy") {
+			filters.sortOrder =
+				e.target.value == "total_votes" ? "desc" : "asc";
+		}
 
-inputSort.addEventListener("input", (e) => {});
+		resetState();
+		loadNextPage();
+	});
+}
 
 loadMoreButton.addEventListener("click", (e) => {
 	loadNextPage();
@@ -86,7 +96,8 @@ function toggleLoadButton(visible = true) {
 }
 
 function resetState() {
-    collegeListings.innerHTML = "";
+	toggleLoadButton(false);
+	collegeListings.innerHTML = "";
 	pageStart = 0;
 	pageLimit = 30;
 }
