@@ -12,7 +12,7 @@ app_license = "MIT"
 
 # Fixtures 
 fixtures = [
-    # export all records from the Category table
+    "Color",
     "Website Settings"
 ]
 
