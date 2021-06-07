@@ -34,14 +34,8 @@ function loadNextPage() {
 }
 
 function appendToListings(collegeList) {
-	if (collegeList.length === 0) {
-		// TODO: Load more button should be hidden
-		// 'No search results' message
-		console.log("No more results");
-	}
-
-	if (collegeList.length < pageLimit) {
-		console.log("Less than limit, need to hide load more button");
+	if (collegeList.length === 0 || collegeList.length < pageLimit) {
+		toggleLoadButton(true);
 	}
 
 	let cardHTML = "";
@@ -71,4 +65,12 @@ function appendToListings(collegeList) {
 		cardElement.innerHTML = cardHTML;
 		collegeListings.append(cardElement);
 	}
+}
+
+function toggleLoadButton(visible = true) {
+	loadMoreButton.style.display = visible ? "none" : "block";
+}
+
+function resetState() {
+	toggleLoadButton(false);
 }
