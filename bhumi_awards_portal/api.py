@@ -7,7 +7,7 @@ def get_colleges_by_rank(limit=None, name_query=None):
 
 @frappe.whitelist(allow_guest=True)
 def get_chart_data():
-    top_10_colleges = College.get_colleges_by_rank(limit=10)
+    top_10_colleges = College.get_with_rank(limit=10)
     chart_data = {
        "labels": [c.name for c in top_10_colleges],
        "datasets": [{
