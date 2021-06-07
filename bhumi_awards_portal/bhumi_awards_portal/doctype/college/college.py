@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 class College(Document):
 	@staticmethod
-	def get_colleges_by_rank(limit=None, name_query=None):
+	def get_with_rank(limit=None, name_query=None):
 		colleges = frappe.get_all(
 			'College', 
 			fields=['name', 'total_votes', 'location'],
