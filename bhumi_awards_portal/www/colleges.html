@@ -1,4 +1,4 @@
-{% set colleges = frappe.get_all('College', fields=['college_name', 'location', 'total_votes']) %}
+{% set colleges = frappe.get_all('College', fields=['college_name', 'location', 'total_votes'], limit_page_length=30) %}
 
 <h2 class="mx-auto my-3 text-center">College Listing</h2>
     
@@ -11,9 +11,9 @@
         <div class="form-group">
             <label for="input-sort">Sort By</label>
             <select name="input-sort" id="input-sort" class="form-control">
-                <option value="votes" selected># of votes</option>
-                <option value="college-name">College Name</option>
-                <option value="college-location">College Location</option>
+                <option value="total_votes" selected># of votes</option>
+                <option value="name">College Name</option>
+                <option value="location">College Location</option>
             </select>
         </div>
         <div class="form-group">
@@ -24,7 +24,7 @@
     
     <main class="col-lg-10">
         <div class="container pt-5">
-            <div class="row align-items-stretch">
+            <div id="college-listings" class="row align-items-stretch">
                 {% for college in colleges %}
                 <div class="col-lg-4 col-sm-12 col-md-6 mb-4">
                     <div class="card w-100 h-100">
