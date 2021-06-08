@@ -31,7 +31,7 @@
   "home_page": null,
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2021-05-31 20:53:23.215636",
+  "modified": "2021-06-08 13:33:44.678283",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
@@ -79,7 +79,7 @@
     "url": "/leaderboard"
    }
   ],
-  "website_theme": "Standard",
+  "website_theme": "Bhumi Theme",
   "website_theme_image_link": null
  }
 ]
