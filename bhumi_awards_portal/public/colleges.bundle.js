@@ -73,7 +73,7 @@ function appendToListings(collegeList) {
                 <h5 class="card-title font-weight-bold">${college.name}</h5>
                 <p class="card-text d-block mb-4">${college.location}</p>
                 <div class="d-flex justify-content-between align-items-center card-footer bg-transparent">
-                    <p class="m-0 p-0 mr-1">
+                    <p class="m-0 p-0 mr-1 vote-count">
                         ${college.total_votes}
                         ${college.total_votes == 1 ? "vote" : "votes"}
                     </p>
