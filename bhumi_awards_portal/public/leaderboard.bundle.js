@@ -67,6 +67,7 @@ function refreshTable(nOfColleges = null, nameQuery = "") {
 	return frappe.call({
 		method: "bhumi_awards_portal.api.get_colleges_by_rank",
 		args: args,
+		freeze: true,
 		callback: (data) => {
 			populateRankTable(data.message);
 		},
@@ -94,12 +95,15 @@ function refreshChart() {
 	// Fetch and populate chart
 	frappe.call({
 		method: "bhumi_awards_portal.api.get_chart_data",
+		freeze: true,
 		callback: ({ message }) => {
 			votesChart.update(message);
 		},
 	});
 }
 
-// First Load
-refreshChart();
-refreshTable(nOfColleges, "");
+frappe.ready(() => {
+	refreshChart();
+	refreshTable(nOfColleges, "");
+});
+
