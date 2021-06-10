@@ -3,6 +3,7 @@ const collegeListings = document.getElementById("college-listings");
 const loadMoreButton = document.getElementById("load-more-button");
 
 // Global variables
+let loading = false;
 let pageStart = 30;
 let pageLimit = 30;
 
@@ -50,6 +51,7 @@ function loadNextPage() {
 			name_query: filters.nameQuery,
 			location_query: filters.locationQuery,
 		},
+		freeze: true,
 		callback: ({ message }) => {
 			appendToListings(message);
 			pageStart += pageLimit;
@@ -73,7 +75,7 @@ function appendToListings(collegeList) {
                 <h5 class="card-title font-weight-bold">${college.name}</h5>
                 <p class="card-text d-block mb-4">${college.location}</p>
                 <div class="d-flex justify-content-between align-items-center card-footer bg-transparent">
-                    <p class="m-0 p-0 mr-1 vote-count">
+                    <p class="m-0 mr-3 p-0 mr-1 vote-count">
                         ${college.total_votes}
                         ${college.total_votes == 1 ? "vote" : "votes"}
                     </p>
