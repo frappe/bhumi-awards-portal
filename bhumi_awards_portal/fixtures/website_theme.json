@@ -5,8 +5,8 @@
   "button_rounded_corners": 1,
   "button_shadows": 0,
   "custom": 1,
-  "custom_overrides": "$success: #75AC39;\n$orange: #E28B22;\n\n:root {\n    --green: #75AC39;\n    --orange: #E28B22;\n}",
-  "custom_scss": ".vote-count {\n    color: var(--orange);\n}",
+  "custom_overrides": "$success: #75AC39;\n$secondary: #E28B22;\n\n:root {\n    --green: #75AC39;\n    --orange: #E28B22;\n}\n\n.icon {\n    --icon-stroke: #FFF;\n}\n",
+  "custom_scss": ".vote-count {\n    color: var(--orange);\n}\n\n.btn.btn-secondary {\n    background-color: $secondary;\n    color: #fff;\n}\n\n.btn.btn-secondary:hover {\n    background-color: lighten($secondary, 5%);\n    color: #fff;\n}\n\n#refresh-button:hover {\n    background-color: lighten($secondary, 5%);\n}\n\nh1 {\n    font-family: \"Libre Baskerville\", serif;\n}\n\nh2 {\n    font-family: \"Montserrat\", sans-serif;\n}",
   "dark_color": null,
   "docstatus": 0,
   "doctype": "Website Theme",
@@ -16,7 +16,7 @@
   "ignored_apps": [],
   "js": null,
   "light_color": "Bhumi Orange",
-  "modified": "2021-06-10 13:44:01.991893",
+  "modified": "2021-06-11 13:08:49.500316",
   "module": "Website",
   "name": "Bhumi Theme",
   "parent": null,
@@ -25,7 +25,7 @@
   "primary_color": "Bhumi Green",
   "text_color": null,
   "theme": "Bhumi Theme",
-  "theme_scss": "\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap\");\n$font-family-sans-serif: \"Montserrat\", -apple-system, BlinkMacSystemFont,\n\t\"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\",\n\t\"Droid Sans\", \"Helvetica Neue\", sans-serif;\n$primary: #75AC39;$enable-shadows: false;\n$enable-gradients: false;\n$enable-rounded: true;\n\n// Bootstrap Variable Overrides\n$success: #75AC39;\n$orange: #E28B22;\n\n:root {\n    --green: #75AC39;\n    --orange: #E28B22;\n}\n\n// Import themes from installed apps\n@import \"frappe/public/scss/website.bundle\";\n@import \"bhumi_awards_portal/public/scss/website\";\n\n\n\n// Custom Theme\n.vote-count {\n    color: var(--orange);\n}\n\n:root {\n\t\n\t--primary: #{$primary};\n\t--primary-color: #{$primary};\n\t}\n",
-  "theme_url": "/files/website_theme/bhumi_theme_1e3ff4ec.css"
+  "theme_scss": "\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap\");\n$font-family-sans-serif: \"Montserrat\", -apple-system, BlinkMacSystemFont,\n\t\"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\",\n\t\"Droid Sans\", \"Helvetica Neue\", sans-serif;\n$primary: #75AC39;$enable-shadows: false;\n$enable-gradients: false;\n$enable-rounded: true;\n\n// Bootstrap Variable Overrides\n$success: #75AC39;\n$secondary: #E28B22;\n\n:root {\n    --green: #75AC39;\n    --orange: #E28B22;\n}\n\n.icon {\n    --icon-stroke: #FFF;\n}\n\n\n// Import themes from installed apps\n@import \"frappe/public/scss/website.bundle\";\n@import \"bhumi_awards_portal/public/scss/website\";\n\n\n\n// Custom Theme\n.vote-count {\n    color: var(--orange);\n}\n\n.btn.btn-secondary {\n    background-color: $secondary;\n    color: #fff;\n}\n\n.btn.btn-secondary:hover {\n    background-color: lighten($secondary, 5%);\n    color: #fff;\n}\n\n#refresh-button:hover {\n    background-color: lighten($secondary, 5%);\n}\n\nh1 {\n    font-family: \"Libre Baskerville\", serif;\n}\n\nh2 {\n    font-family: \"Montserrat\", sans-serif;\n}\n\n:root {\n\t\n\t--primary: #{$primary};\n\t--primary-color: #{$primary};\n\t}\n",
+  "theme_url": "/files/website_theme/bhumi_theme_713d160c.css"
  }
 ]
