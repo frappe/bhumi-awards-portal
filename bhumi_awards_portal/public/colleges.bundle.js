@@ -71,7 +71,7 @@ function appendToListings(collegeList) {
                         ${college.total_votes}
                         ${college.total_votes == 1 ? "vote" : "votes"}
                     </p>
-                    <a href="/vote" class="btn btn-primary">Vote Now</a>
+                    <a href="/vote?new=1&college=${college.name}" class="btn btn-primary">Vote Now</a>
                 </div>
             </div>
         </div>
