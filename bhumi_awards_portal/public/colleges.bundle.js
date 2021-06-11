@@ -1,6 +1,7 @@
 // DOM elements
 const collegeListings = document.getElementById("college-listings");
 const loadMoreButton = document.getElementById("load-more-button");
+const applyButton = document.getElementById("apply-button");
 
 // Global variables
 let loading = false;
@@ -24,19 +25,10 @@ const filterInputs = [
 ];
 
 // Event Listeners
-for (let input of filterInputs) {
-	input.ele.addEventListener("input", (e) => {
-		filters[input.key] = e.target.value;
-
-		if (input.key === "sortBy") {
-			filters.sortOrder =
-				e.target.value == "total_votes" ? "desc" : "asc";
-		}
-
-		resetState();
-		loadNextPage();
-	});
-}
+applyButton.addEventListener("click", () => {
+	resetState();
+	loadNextPage();
+});
 
 loadMoreButton.addEventListener("click", (e) => {
 	loadNextPage();
@@ -98,6 +90,15 @@ function toggleLoadButton(visible = true) {
 }
 
 function resetState() {
+	for (let input of filterInputs) {
+			filters[input.key] = input.ele.value;
+	
+			if (input.key === "sortBy") {
+				filters.sortOrder =
+					input.ele.value == "total_votes" ? "desc" : "asc";
+			}
+	}
+
 	toggleLoadButton(false);
 	collegeListings.innerHTML = "";
 	pageStart = 0;
