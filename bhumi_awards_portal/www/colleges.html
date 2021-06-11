@@ -26,28 +26,6 @@
     <main class="col-lg-10">
         <div class="container-fluid pt-5">
             <div id="college-listings" class="row align-items-stretch">
-                {% for college in colleges %}
-                <div class="col-lg-4 col-sm-12 col-md-6 mb-4">
-                    <div class="card w-100 h-100">
-                        <div class="card-body text-center">
-                            <div class="mx-auto mb-3 rounded-circle bg-success text-white d-flex align-items-center display-4 justify-content-center" style="height: 100px; width: 100px;">{{ frappe.utils.get_abbr(college.college_name) }}</div>
-                            <h5 class="card-title font-weight-bold">{{ college.college_name }}</h5>
-                            <p class="card-text d-block mb-4">{{ college.location }}</p>
-                            <div class="d-flex justify-content-between align-items-center card-footer bg-transparent">
-                                <p class="m-0 mr-3 p-0 mr-1 vote-count">
-                                    {{ college.total_votes }}
-                                    {% if college.total_votes == 1 %} 
-                                        vote
-                                    {% else %}
-                                        votes
-                                    {% endif %}
-                                </p>
-                                <a href="/vote?new=1&college={{ college.college_name }}" class="btn btn-primary">Vote Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
             </div>
         </div>
     

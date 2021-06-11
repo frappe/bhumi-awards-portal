@@ -5,7 +5,7 @@ const applyButton = document.getElementById("apply-button");
 
 // Global variables
 let loading = false;
-let pageStart = 30;
+let pageStart = 0;
 let pageLimit = 30;
 
 let filters = {
@@ -46,9 +46,9 @@ function loadNextPage() {
 		freeze: true,
 		callback: ({ message }) => {
 			appendToListings(message);
-			pageStart += pageLimit;
 		},
 	});
+	pageStart += pageLimit;
 }
 
 function appendToListings(collegeList) {
@@ -58,6 +58,13 @@ function appendToListings(collegeList) {
 
 	let cardHTML = "";
 	for (let college of collegeList) {
+		const redirectPayload = new URLSearchParams({
+			"redirect-to": "/vote?new=1#" + encodeURIComponent(college.name),
+		});
+
+		const redirect_to = redirectPayload.toString();
+		console.log(redirect_to);
+
 		cardHTML = `
         <div class="card w-100 h-100">
             <div class="card-body text-center">
@@ -71,7 +78,7 @@ function appendToListings(collegeList) {
                         ${college.total_votes}
                         ${college.total_votes == 1 ? "vote" : "votes"}
                     </p>
-                    <a href="/vote?new=1&college=${college.name}" class="btn btn-primary">Vote Now</a>
+                    <a href="/login?${redirect_to}" class="btn btn-primary">Vote Now</a>
                 </div>
             </div>
         </div>
@@ -91,12 +98,12 @@ function toggleLoadButton(visible = true) {
 
 function resetState() {
 	for (let input of filterInputs) {
-			filters[input.key] = input.ele.value;
-	
-			if (input.key === "sortBy") {
-				filters.sortOrder =
-					input.ele.value == "total_votes" ? "desc" : "asc";
-			}
+		filters[input.key] = input.ele.value;
+
+		if (input.key === "sortBy") {
+			filters.sortOrder =
+				input.ele.value == "total_votes" ? "desc" : "asc";
+		}
 	}
 
 	toggleLoadButton(false);
@@ -104,3 +111,6 @@ function resetState() {
 	pageStart = 0;
 	pageLimit = 30;
 }
+
+// First load
+frappe.ready(() => loadNextPage());
