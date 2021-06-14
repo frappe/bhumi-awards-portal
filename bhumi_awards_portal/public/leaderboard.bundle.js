@@ -1,14 +1,7 @@
 import { Chart } from "frappe-charts";
 
 // Empty chart
-const votesChart = new Chart("#leaderboard-chart", {
-	data: {
-		datasets: [],
-		labels: [],
-	},
-	type: "bar",
-	colors: ["#e28b22"],
-});
+let votesChart;
 
 // Global variables
 let nOfColleges = 10;
@@ -97,7 +90,14 @@ function refreshChart() {
 		method: "bhumi_awards_portal.api.get_chart_data",
 		freeze: true,
 		callback: ({ message }) => {
-			votesChart.update(message);
+			votesChart = new Chart("#leaderboard-chart", {
+				data: {
+					datasets: message.datasets,
+					labels: message.labels,
+				},
+				type: "bar",
+				colors: ["#e28b22"],
+			});
 		},
 	});
 }
