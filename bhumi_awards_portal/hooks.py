@@ -14,7 +14,8 @@ app_license = "MIT"
 fixtures = [
     "Color",
     {"dt": "Website Theme", "filters": {"name": "Bhumi Theme"}},
-    "Website Settings"
+    "Website Settings",
+    {"dt": "Role", "filters": {"name": "Voter"}}
 ]
 
 # Includes in <head>
