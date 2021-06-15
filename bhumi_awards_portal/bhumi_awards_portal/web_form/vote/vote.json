@@ -10,7 +10,7 @@
  "amount_based_on_field": 0,
  "apply_document_permissions": 0,
  "button_label": "Vote",
- "client_script": "console.log(decodeURIComponent(window.location.hash.substr(1)))\n\nconst collegeName = decodeURIComponent(window.location.hash.substr(1));\nfrappe.web_form.set_value(\"college\", collegeName);",
+ "client_script": "// Populate college field\n\nconst collegeName = decodeURIComponent(window.location.hash.substr(1));\nfrappe.web_form.set_value(\"college\", collegeName);\n\ndocument.getElementsByTagName(\"input\")[1].maxLength = 10;",
  "creation": "2021-05-31 12:45:29.322194",
  "custom_css": ".btn-primary {\n    background: #75ac39 !important;\n}\n\na {\n    color: #e28b22;\n}\n\na:hover {\n    color: #000;\n}\n",
  "doc_type": "Vote",
@@ -20,7 +20,7 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-06-11 17:04:40.280350",
+ "modified": "2021-06-15 12:07:10.079542",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "vote",
@@ -34,7 +34,7 @@
  "show_sidebar": 0,
  "sidebar_items": [],
  "success_message": "Your vote was successfully submitted. Thank you for voting!",
- "success_url": "/vote",
+ "success_url": "/",
  "title": "Vote",
  "web_form_fields": [
   {
