@@ -4,7 +4,6 @@ const loadMoreButton = document.getElementById("load-more-button");
 const applyButton = document.getElementById("apply-button");
 
 // Global variables
-let loading = false;
 let pageStart = 0;
 let pageLimit = 30;
 
