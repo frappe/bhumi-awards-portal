@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2021-06-17 19:34:02.677322",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "timeline_content"
+ ],
+ "fields": [
+  {
+   "default": "[TBD]",
+   "fieldname": "timeline_content",
+   "fieldtype": "Markdown Editor",
+   "label": "Timeline Content"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-06-17 19:36:10.960464",
+ "modified_by": "Administrator",
+ "module": "Bhumi Awards Portal",
+ "name": "Campus Awards Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

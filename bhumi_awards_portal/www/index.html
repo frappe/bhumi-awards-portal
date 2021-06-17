@@ -145,6 +145,8 @@
 
 <div class="hero-content py-5">
 	<h2>Timeline</h2>
-	<p class="hero-subtitle text-center">[TBD]</p>
-	<ul class="mb-3"></ul>
+    {% set portal_settings = frappe.get_doc('Campus Awards Settings', 'Campus Awards Settings') %}
+	<p>
+        {{ portal_settings.timeline_content }}
+    </p>
 </div>
