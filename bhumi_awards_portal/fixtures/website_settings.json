@@ -32,20 +32,9 @@
     "url": "https://www.bhumi.ngo/donate/?utm_source=Bhumi%20Homepage%20Footer%20Button&utm_medium=Website%20&utm_campaign=Donate"
    },
    {
-    "icon": null,
-    "label": "Donate Now",
-    "open_in_new_tab": 1,
-    "parent": "Website Settings",
-    "parent_label": "",
-    "parentfield": "footer_items",
-    "parenttype": "Website Settings",
-    "right": 0,
-    "url": "https://www.bhumi.ngo/donate/?utm_source=Bhumi%20Homepage%20Footer%20Button&utm_medium=Website%20&utm_campaign=Donate"
-   },
-   {
     "icon": "/files/facebooka6675a.svg",
     "label": "Facebook",
-    "open_in_new_tab": 0,
+    "open_in_new_tab": 1,
     "parent": "Website Settings",
     "parent_label": null,
     "parentfield": "footer_items",
@@ -56,12 +45,12 @@
    {
     "icon": "/files/twitter.svg",
     "label": "Twitter",
-    "open_in_new_tab": 0,
+    "open_in_new_tab": 1,
     "parent": "Website Settings",
     "parent_label": null,
     "parentfield": "footer_items",
     "parenttype": "Website Settings",
-    "right": 0,
+    "right": 1,
     "url": "https://twitter.com/BhumiOrg"
    }
   ],
@@ -76,7 +65,7 @@
   "home_page": null,
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2021-06-17 18:37:31.532850",
+  "modified": "2021-06-17 18:39:57.529606",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
@@ -103,17 +92,6 @@
    },
    {
     "icon": null,
-    "label": "Home",
-    "open_in_new_tab": 0,
-    "parent": "Website Settings",
-    "parent_label": null,
-    "parentfield": "top_bar_items",
-    "parenttype": "Website Settings",
-    "right": 1,
-    "url": "/"
-   },
-   {
-    "icon": null,
     "label": "College Listings",
     "open_in_new_tab": 0,
     "parent": "Website Settings",
@@ -122,28 +100,6 @@
     "parenttype": "Website Settings",
     "right": 1,
     "url": "/colleges"
-   },
-   {
-    "icon": null,
-    "label": "College Listings",
-    "open_in_new_tab": 0,
-    "parent": "Website Settings",
-    "parent_label": null,
-    "parentfield": "top_bar_items",
-    "parenttype": "Website Settings",
-    "right": 1,
-    "url": "/colleges"
-   },
-   {
-    "icon": null,
-    "label": "Leaderboard",
-    "open_in_new_tab": 0,
-    "parent": "Website Settings",
-    "parent_label": null,
-    "parentfield": "top_bar_items",
-    "parenttype": "Website Settings",
-    "right": 1,
-    "url": "/leaderboard"
    },
    {
     "icon": null,
