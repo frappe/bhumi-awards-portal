@@ -2,7 +2,7 @@
  {
   "address": "<div class=\"ql-editor read-mode\"><p>Experience the power of giving.</p></div>",
   "banner_html": null,
-  "banner_image": "/files/Bhumi-Torchbearer-Logo-White-1500-PNG-300x218.png",
+  "banner_image": "/assets/bhumi_awards_portal/images/bhumi-logo.png",
   "brand_html": null,
   "call_to_action": null,
   "call_to_action_url": null,
@@ -32,7 +32,7 @@
     "url": "https://www.bhumi.ngo/donate/?utm_source=Bhumi%20Homepage%20Footer%20Button&utm_medium=Website%20&utm_campaign=Donate"
    },
    {
-    "icon": "/files/facebooka6675a.svg",
+    "icon": "/assets/bhumi_awards_portal/images/facebook.svg",
     "label": "Facebook",
     "open_in_new_tab": 1,
     "parent": "Website Settings",
@@ -43,7 +43,7 @@
     "url": "https://www.facebook.com/Bhumi.org"
    },
    {
-    "icon": "/files/twitter.svg",
+    "icon": "/assets/bhumi_awards_portal/images/twitter.svg",
     "label": "Twitter",
     "open_in_new_tab": 1,
     "parent": "Website Settings",
@@ -54,7 +54,7 @@
     "url": "https://twitter.com/BhumiOrg"
    }
   ],
-  "footer_logo": "/files/Bhumi-Torchbearer-Logo-White-1500-PNG-300x218.png",
+  "footer_logo": "/assets/bhumi_awards_portal/images/bhumi-logo.png",
   "footer_template": null,
   "footer_template_values": null,
   "google_analytics_anonymize_ip": 1,
@@ -65,7 +65,7 @@
   "home_page": null,
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2021-06-17 18:39:57.529606",
+  "modified": "2021-06-22 15:35:57.529606",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
