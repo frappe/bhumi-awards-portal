@@ -10,9 +10,9 @@
  "amount_based_on_field": 0,
  "apply_document_permissions": 0,
  "button_label": "Vote",
- "client_script": "// Populate college field\n\nconst collegeName = decodeURIComponent(window.location.hash.substr(1));\nfrappe.web_form.set_value(\"college\", collegeName);\n\ndocument.getElementsByTagName(\"input\")[1].maxLength = 10;\ndocument.getElementsByTagName(\"input\")[1].minLength = 10;",
+ "client_script": "$('main').addClass('card voting-card');",
  "creation": "2021-05-31 12:45:29.322194",
- "custom_css": ".btn-primary {\n    background: #75ac39 !important;\n}\n\na {\n    color: #e28b22;\n}\n\na:hover {\n    color: #000;\n}\n",
+ "custom_css": ".voting-card {\n    width: 50%;\n    padding: 30px;\n    margin-bottom: 30px;\n}\n",
  "doc_type": "Vote",
  "docstatus": 0,
  "doctype": "Web Form",
@@ -20,7 +20,7 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-06-17 19:30:05.247450",
+ "modified": "2021-06-22 23:05:44.954655",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "vote",
@@ -38,7 +38,7 @@
  "title": "Vote",
  "web_form_fields": [
   {
-   "allow_read_on_all_link_options": 0,
+   "allow_read_on_all_link_options": 1,
    "fieldname": "college",
    "fieldtype": "Link",
    "hidden": 0,
@@ -65,6 +65,19 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "fieldname": "voter_contact",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Contact",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Phone",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
    "fieldname": "reason_for_nomination",
    "fieldtype": "Text",
    "hidden": 0,
@@ -73,19 +86,6 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "voter_contact",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Voter Contact",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Phone",
-   "read_only": 0,
-   "reqd": 1,
    "show_in_filter": 0
   },
   {
