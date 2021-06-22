@@ -18,7 +18,7 @@
  "is_standard": 1,
  "label": "Bhumi",
  "links": [],
- "modified": "2021-06-22 13:06:14.744132",
+ "modified": "2021-06-22 13:49:13.139697",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Bhumi",
@@ -41,6 +41,14 @@
    "format": "{}",
    "label": "Vote",
    "link_to": "Vote",
+   "stats_filter": "{}",
+   "type": "DocType"
+  },
+  {
+   "color": "#449CF0",
+   "doc_view": "List",
+   "label": "Location",
+   "link_to": "Location",
    "stats_filter": "{}",
    "type": "DocType"
   }
