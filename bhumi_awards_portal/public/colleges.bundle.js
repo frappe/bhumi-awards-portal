@@ -56,6 +56,8 @@ function appendToListings(collegeList) {
 	}
 
 	let cardHTML = "";
+	let abbr = undefined;
+
 	for (let college of collegeList) {
 		const redirectPayload = new URLSearchParams({
 			"redirect-to": "/vote?new=1#" + encodeURIComponent(college.name),
@@ -64,23 +66,28 @@ function appendToListings(collegeList) {
 		const redirect_to = redirectPayload.toString();
 		console.log(redirect_to);
 
+		abbr = frappe.get_abbr(college.name)
+
 		cardHTML = `
-        <div class="card w-100 h-100">
-            <div class="card-body text-center">
-                <div class="mx-auto mb-3 rounded-circle bg-success text-white d-flex align-items-center display-4 justify-content-center" style="height: 100px; width: 100px;">${frappe.get_abbr(
-					college.name
-				)}</div>
-                <h5 class="card-title font-weight-bold">${college.name}</h5>
-                <p class="card-text d-block mb-4">${college.location}</p>
-                <div class="d-flex justify-content-between align-items-center card-footer bg-transparent">
-                    <p class="m-0 mr-3 p-0 mr-1 vote-count">
-                        ${college.total_votes}
-                        ${college.total_votes == 1 ? "vote" : "votes"}
-                    </p>
-                    <a href="/login?${redirect_to}" class="btn btn-primary">Vote Now</a>
-                </div>
-            </div>
-        </div>
+		<div class="card w-100 h-100">
+			<div class="card-body text-center">
+				<div class="mx-auto mb-3 rounded-circle text-white d-flex align-items-center display-4 justify-content-center"
+					style="height: 100px; width: 100px; background-color: #badc95;">
+					${abbr}
+				</div>
+				<h5 class="card-title font-weight-bold">${college.name}</h5>
+				<p class="card-text d-block mb-4">
+					<img alt="Location Icon" class="feature-icon" src="/assets/bhumi_awards_portal/images/location.png">${college.location}
+				</p>
+				<div class="d-flex justify-content-between align-items-center card-footer bg-transparent">
+					<p class="m-0 mr-3 p-0 mr-1 vote-count">
+						${college.total_votes}
+						${college.total_votes == 1 ? "vote" : "votes"}
+					</p>
+					<a href="/login?${redirect_to}" class="btn btn-primary">Vote Now</a>
+				</div>
+			</div>
+		</div>
 `;
 
 		// Append this card to college listings
