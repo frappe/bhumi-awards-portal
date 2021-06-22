@@ -12,7 +12,7 @@
   "chat_operators": [],
   "chat_room_name": "Support",
   "chat_welcome_message": "Hi, how may I help you?",
-  "copyright": "Copyright \u00a9 Bhumi | Tech4Change",
+  "copyright": "Bhumi | Tech4Change",
   "disable_signup": 0,
   "docstatus": 0,
   "doctype": "Website Settings",
@@ -30,6 +30,28 @@
     "parenttype": "Website Settings",
     "right": 0,
     "url": "https://www.bhumi.ngo/donate/?utm_source=Bhumi%20Homepage%20Footer%20Button&utm_medium=Website%20&utm_campaign=Donate"
+   },
+   {
+    "icon": null,
+    "label": "Colleges",
+    "open_in_new_tab": 0,
+    "parent": "Website Settings",
+    "parent_label": null,
+    "parentfield": "footer_items",
+    "parenttype": "Website Settings",
+    "right": 0,
+    "url": "/colleges"
+   },
+   {
+    "icon": null,
+    "label": "Leaderboard",
+    "open_in_new_tab": 0,
+    "parent": "Website Settings",
+    "parent_label": null,
+    "parentfield": "footer_items",
+    "parenttype": "Website Settings",
+    "right": 0,
+    "url": "/leaderboard"
    },
    {
     "icon": "/assets/bhumi_awards_portal/images/facebook.svg",
@@ -55,7 +77,7 @@
    }
   ],
   "footer_logo": "/assets/bhumi_awards_portal/images/bhumi-logo.png",
-  "footer_template": null,
+  "footer_template": "Standard Footer",
   "footer_template_values": null,
   "google_analytics_anonymize_ip": 1,
   "google_analytics_id": null,
@@ -65,7 +87,7 @@
   "home_page": null,
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2021-06-22 22:11:57.529606",
+  "modified": "2021-06-22 22:44:43.896347",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
