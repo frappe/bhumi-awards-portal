@@ -18,7 +18,7 @@
   "doctype": "Website Settings",
   "enable_google_indexing": 0,
   "enable_view_tracking": 0,
-  "favicon": null,
+  "favicon": "/assets/bhumi_awards_portal/images/bhumi-logo.png",
   "footer_items": [
    {
     "icon": null,
@@ -65,7 +65,7 @@
   "home_page": null,
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2021-06-22 15:35:57.529606",
+  "modified": "2021-06-22 22:11:57.529606",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
