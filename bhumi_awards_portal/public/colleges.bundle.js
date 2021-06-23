@@ -120,3 +120,22 @@ function resetState() {
 
 // First load
 frappe.ready(() => loadNextPage());
+
+window.onscroll = function() {add_sticky_to_filter_area()};
+
+// Get the header
+var header = document.getElementById("filters-area");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function add_sticky_to_filter_area() {
+	if (window.pageYOffset > sticky) {
+		header.classList.add("sticky", "container-fluid");
+		header.classList.remove("container");
+	} else {
+		header.classList.add("container");
+		header.classList.remove("sticky", "container-fluid");
+	}
+}

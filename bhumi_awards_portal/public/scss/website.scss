@@ -35,3 +35,19 @@
 	height: 1.2rem;
 	object-fit: contain;
 }
+
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background: white;
+	padding: 20px;
+	border-bottom: 1px solid #E2E6E9;
+  }
+
+  /* Add some top padding to the page content to prevent sudden movement (as the header gets a new position at the top of the page */
+  .sticky + .colleges {
+	padding-top: 102px;
+  }
