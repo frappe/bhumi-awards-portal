@@ -21,6 +21,7 @@
    "fieldname": "college",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "College",
    "options": "College",
    "reqd": 1
@@ -28,6 +29,8 @@
   {
    "fieldname": "association_with_college",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Association with College",
    "options": "Current Student\nStudent Alumni\nCurrent Staff\nStaff Alumni\nNot Directly Associated",
    "reqd": 1
@@ -40,6 +43,8 @@
   {
    "fieldname": "voter_contact",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Voter Contact",
    "options": "Phone",
    "reqd": 1
@@ -47,12 +52,16 @@
   {
    "fieldname": "voter_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Voter Name",
    "read_only": 1
   },
   {
    "fieldname": "voter",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Voter (User)",
    "options": "User"
   },
@@ -78,7 +87,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-25 16:24:12.338254",
+ "modified": "2021-06-25 16:37:45.265107",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Vote",
