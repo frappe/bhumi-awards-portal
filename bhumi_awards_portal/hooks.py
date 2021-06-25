@@ -10,7 +10,7 @@ app_email = "t4c@bhumi.ngo"
 app_license = "MIT"
 
 
-# Fixtures 
+# Fixtures
 fixtures = [
     "Color",
     {"dt": "Website Theme", "filters": {"name": "Bhumi Theme"}},
@@ -32,7 +32,7 @@ fixtures = [
 # include custom scss in every website theme (without file extension ".scss")
 website_theme_scss = "bhumi_awards_portal/public/scss/website"
 
-brand_html = '<div><img src="/assets/bhumi_logo.png"></div>'
+brand_html = '<div><img src="/assets/bhumi_awards_portal/images/bhumi_logo.png"></div>'
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}

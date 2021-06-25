@@ -5,9 +5,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "college_details_section",
   "college",
+  "column_break_2",
   "association_with_college",
+  "reason_for_nomination_section",
   "reason_for_nomination",
+  "voter_details_section",
   "voter_contact",
   "voter_name",
   "voter"
@@ -17,6 +21,7 @@
    "fieldname": "college",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "College",
    "options": "College",
    "reqd": 1
@@ -24,6 +29,8 @@
   {
    "fieldname": "association_with_college",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Association with College",
    "options": "Current Student\nStudent Alumni\nCurrent Staff\nStaff Alumni\nNot Directly Associated",
    "reqd": 1
@@ -31,12 +38,13 @@
   {
    "allow_in_quick_entry": 1,
    "fieldname": "reason_for_nomination",
-   "fieldtype": "Long Text",
-   "label": "Reason for Nomination"
+   "fieldtype": "Long Text"
   },
   {
    "fieldname": "voter_contact",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Voter Contact",
    "options": "Phone",
    "reqd": 1
@@ -44,19 +52,42 @@
   {
    "fieldname": "voter_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Voter Name",
    "read_only": 1
   },
   {
    "fieldname": "voter",
    "fieldtype": "Link",
-   "label": "Voter",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Voter (User)",
    "options": "User"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason_for_nomination_section",
+   "fieldtype": "Section Break",
+   "label": "Reason for Nomination"
+  },
+  {
+   "fieldname": "voter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Voter Details"
+  },
+  {
+   "fieldname": "college_details_section",
+   "fieldtype": "Section Break",
+   "label": "College Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-14 14:20:26.159022",
+ "modified": "2021-06-25 16:37:45.265107",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Vote",
@@ -89,5 +120,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "voter_name",
  "track_changes": 1
 }

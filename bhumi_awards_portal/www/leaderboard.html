@@ -1,74 +1,93 @@
-<h2 class="mx-auto my-3 text-center text-success text-uppercase font-weight-normal">Leaderboard</h2>
+---
+full_width: 1
+title: Leaderboard
+---
+<section id="leaderboard-header" class="section section-padding-top section-padding-bottom bg-light" data-section-template="Hero">
+	<div class="container">
+		<div class="hero">
+			<div class="hero-content">
+				<h1 class="hero-title">Leaderboard</h1>
+				<p class="hero-subtitle">
+					Checkout who is winning!
+				</p>
+				<div class="hero-buttons">
+					<a class="btn btn-lg btn-secondary" href="#leaderboard-section">Explore</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<div class="container">
-    <div class="row justify-content-center">
-      <div id="leaderboard-chart" class="col-sm-9"></div>
-      
-      <div class="d-flex flex-column justify-content-center justify-self-center text-center mt-4" class="col-sm-3">
-          <p class="h3 text-uppercase text-muted">Total Votes</p>
-          <p class="display-3">{{ frappe.get_all('Vote') | length }}</p>
-      </div>
-    </div>
-    
-    
-    <div class="d-flex justify-content-between">
-        <input id="search-input" type="text" class="form-control w-25" placeholder="Search College">
-        <div>
-          <button id="refresh-button" class="btn btn-secondary">
-            <svg id="refresh-button-icon" class="icon icon-md">
-							<use xlink:href="#icon-refresh"></use>
-						</svg>
-          </button>
-          <a role="button" href="/vote" class="btn btn-primary text-upper">Vote Now</a>
-        </div>
-    </div>
+<section id="leaderboard-section" class="section section-padding-top section-padding-bottom">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div id="leaderboard-chart" class="col-sm-9"></div>
 
-    <table id="rank-table" class="table mt-5">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">College</th>
-            <th scope="col">Total Votes</th>
-            <th scope="col">Location</th>
-          </tr>
-        </thead>
-        <tbody id="rank-table-body">
-          <!-- Will be populated by JS -->
-        </tbody>
-      </table>
-    
-      <nav aria-label="Number of colleges to display" class="d-flex justify-content-center mt-3">
-        <ul class="pagination">
-          <li class="page-item active"><button class="page-link page-limit-button" href="#">10</button></li>
-          <li class="page-item"><button class="page-link page-limit-button" href="#">50</button></li>
-          <li class="page-item"><button class="page-link page-limit-button" href="#">100</button></li>
-          <li class="page-item"><button class="page-link text-uppercase page-limit-button" href="#">all</button></li>
-        </ul>
-      </nav>
-</div>
+			<div class="d-flex flex-column justify-content-center justify-self-center text-center mt-4" class="col-sm-3">
+				<p class="h3 text-uppercase text-muted">Total Votes</p>
+				<p class="display-3">{{ frappe.get_all('Vote') | length }}</p>
+			</div>
+		</div>
+
+		<div class="mt-5 d-flex justify-content-between">
+			<input id="search-input" type="text" class="form-control w-25" placeholder="Search College">
+			<div>
+				<button id="refresh-button" class="btn btn-secondary mr-2">
+					<svg id="refresh-button-icon" class="icon icon-md">
+						<use xlink:href="#icon-refresh"></use>
+					</svg>
+				</button>
+				<a role="button" href="/vote" class="btn btn-primary text-upper">Vote Now</a>
+			</div>
+		</div>
+
+		<table id="rank-table" class="table mt-5">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">College</th>
+					<th scope="col">Total Votes</th>
+					<th scope="col">Location</th>
+				</tr>
+			</thead>
+			<tbody id="rank-table-body">
+				<!-- Will be populated by JS -->
+			</tbody>
+		</table>
+
+		<nav aria-label="Number of colleges to display" class="d-flex justify-content-center mt-3">
+			<ul class="pagination">
+				<li class="page-item active"><button class="page-link page-limit-button" href="#">10</button></li>
+				<li class="page-item"><button class="page-link page-limit-button" href="#">50</button></li>
+				<li class="page-item"><button class="page-link page-limit-button" href="#">100</button></li>
+				<li class="page-item"><button class="page-link text-uppercase page-limit-button" href="#">all</button></li>
+			</ul>
+		</nav>
+	</div>
+</section>
 
 {% block style %}
 <style>
-  /* https://codepen.io/teerapuch/pen/vLJXeR */
-  .spin {
-    animation-name: spin;
-    animation-duration: 1200ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; 
-  }
+	/* https://codepen.io/teerapuch/pen/vLJXeR */
+	.spin {
+		animation-name: spin;
+		animation-duration: 1200ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
 
-  @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-  }
+	@keyframes spin {
+		from {
+				transform:rotate(0deg);
+		}
+		to {
+				transform:rotate(360deg);
+		}
+	}
 </style>
 {% endblock %}
 
 <!-- Add a refresh button to refresh the table -->
 {% block script %}
-    {{ include_script('leaderboard.bundle.js') }}
+		{{ include_script('leaderboard.bundle.js') }}
 {% endblock %}
