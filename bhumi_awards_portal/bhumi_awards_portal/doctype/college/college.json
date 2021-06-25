@@ -21,9 +21,10 @@
   },
   {
    "fieldname": "location",
-   "fieldtype": "Small Text",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Location",
+   "options": "Location",
    "reqd": 1
   },
   {
@@ -37,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-14 14:48:07.024517",
+ "modified": "2021-06-25 19:24:00.759273",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
