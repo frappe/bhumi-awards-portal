@@ -64,31 +64,39 @@ function appendToListings(collegeList) {
 		});
 
 		const redirect_to = redirectPayload.toString();
-		console.log(redirect_to);
 
-		abbr = frappe.get_abbr(college.name)
+		abbr = frappe.get_abbr(college.name);
 
 		cardHTML = `
-		<div class="card w-100 h-100">
-			<div class="card-body text-center">
-				<div class="mx-auto mb-3 rounded-circle text-white d-flex align-items-center display-4 justify-content-center"
-					style="height: 100px; width: 100px; background-color: #badc95;">
-					${abbr}
+			<div class="card cursor-pointer p-5 h-100">
+				<div class="d-flex flex-row">
+					<div>
+						<div class="mx-auto mb-3 rounded-circle text-white d-flex align-items-center display-4 justify-content-center" style="height: 70px; width: 70px; background-color: #badc95;">
+							${abbr}
+						</div>
+					</div>
+					<div class="col my-auto">
+						<h5 class="card-title font-weight-bold">${college.name}</h5>
+
+						<div class="d-flex flex-col">
+							<img alt="Location Icon" class="feature-icon" src="/assets/bhumi_awards_portal/images/location.png">
+							<span class="card-text d-block mb-4">${college.location}</span>
+						</div>
+					</div>
 				</div>
-				<h5 class="card-title font-weight-bold">${college.name}</h5>
-				<p class="card-text d-block mb-4">
-					<img alt="Location Icon" class="feature-icon" src="/assets/bhumi_awards_portal/images/location.png">${college.location}
-				</p>
-				<div class="d-flex justify-content-between align-items-center card-footer bg-transparent">
-					<p class="m-0 mr-3 p-0 mr-1 vote-count">
-						${college.total_votes}
-						${college.total_votes == 1 ? "vote" : "votes"}
-					</p>
+				<div class="d-flex justify-content-between align-items-center card-footer mt-auto bg-transparent">
+					<div class="d-flex flex-col">
+						<img alt="Location Icon" class="feature-icon" src="/assets/bhumi_awards_portal/images/vote.png">
+						<span class="m-0 mr-3 p-0 mr-1">
+							${college.total_votes}
+							${college.total_votes == 1 ? "vote" : "votes"}
+						</span>
+					</div>
+
 					<a href="/login?${redirect_to}" class="btn btn-primary">Vote Now</a>
 				</div>
 			</div>
-		</div>
-`;
+		`
 
 		// Append this card to college listings
 		const cardElement = document.createElement("div");

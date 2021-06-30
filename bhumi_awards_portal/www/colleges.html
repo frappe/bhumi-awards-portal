@@ -24,13 +24,11 @@ title: College Listings
 			<div class="form-row align-items-center">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label for="input-name-search">Search College</label>
-						<input type="text" class="form-control" id="input-name-search" placeholder="Enter college name">
+						<input type="text" class="form-control" id="input-name-search" placeholder="Search College">
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group">
-						<label for="input-sort">Sort By</label>
 						<select name="input-sort" id="input-sort" class="form-control">
 							<option value="total_votes" selected># of votes</option>
 							<option value="name">College Name</option>
@@ -40,17 +38,16 @@ title: College Listings
 				</div>
 				<div class="col-md-3">
 					<div class="form-group">
-						<label for="input-location-search">Filter By Location</label>
-            <select class="form-control" id="input-location-search" name="input-location-search">
-                <option value=''>Select location</option>
-                {% for location in frappe.get_all('Location', fields=['name'], order_by="name") %}
-                        <option>{{ location['name'] }}</option>
-                {% endfor %}
-            </select>
+						<select class="form-control" id="input-location-search" name="input-location-search">
+							<option value=''>Select Location</option>
+							{% for location in frappe.get_all('Location', fields=['name'], order_by="name") %}
+									<option>{{ location['name'] }}</option>
+							{% endfor %}
+						</select>
 					</div>
 				</div>
 				<div class="col-md-1">
-					<button id="apply-button" class="btn btn-secondary mt-3">Apply</button>
+					<button id="apply-button" class="btn btn-secondary mb-4">Apply</button>
 				</div>
 			</div>
 		</div>

@@ -37,6 +37,24 @@
 	object-fit: contain;
 }
 
+.process-section {
+	background-color: var(--light-green);
+}
+
+.process-image {
+	width: 400px;
+	height: 400px;
+}
+
+.vote-cta {
+	background-color: var(--light-orange);
+}
+
+.form-control {
+	border: 1px solid var(--orange);
+	background-color: white !important;
+}
+
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
 	position: fixed;
