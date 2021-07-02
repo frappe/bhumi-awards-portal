@@ -13,17 +13,9 @@
   "font_properties": "wght@300;400;500;600;700;800",
   "font_size": null,
   "google_font": "Montserrat",
-  "ignored_apps": [
-   {
-    "app": "bhumi_awards_portal",
-    "parent": "Bhumi Theme",
-    "parentfield": "ignored_apps",
-    "parenttype": "Website Theme"
-   }
-  ],
   "js": null,
   "light_color": "Bhumi Orange",
-  "modified": "2021-07-01 02:30:05.233682",
+  "modified": "2021-07-02 02:32:05.233682",
   "module": "Website",
   "name": "Bhumi Theme",
   "parent": null,

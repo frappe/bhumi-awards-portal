@@ -2,6 +2,10 @@
 full_width: 1
 title: Leaderboard
 ---
+
+{% extends "templates/web.html" %}
+
+{% block page_content %}
 <section id="leaderboard-header" class="section section-padding-top section-padding-bottom bg-light" data-section-template="Hero">
 	<div class="container">
 		<div class="hero">
@@ -65,6 +69,7 @@ title: Leaderboard
 		</nav>
 	</div>
 </section>
+{% endblock %}
 
 {% block style %}
 <style>

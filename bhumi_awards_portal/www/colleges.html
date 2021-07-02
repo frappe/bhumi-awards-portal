@@ -2,6 +2,10 @@
 full_width: 1
 title: College Listings
 ---
+
+{% extends "templates/web.html" %}
+
+{% block page_content %}
 <section class="section section-padding-top section-padding-bottom bg-light" data-section-template="Hero">
 	<div class="container">
 		<div class="hero">
@@ -85,6 +89,7 @@ title: College Listings
 		</div>
 	</div>
 </section>
+{% endblock %}
 
 {% block script %}
 	{{ include_script('colleges.bundle.js') }}
