@@ -8,12 +8,17 @@ class Vote(Document):
 	def validate(self):
 		self.set_voter()
 		self.validate_single_vote()
-		
+		self.validate_mobile_no()
+
 	def validate_single_vote(self):
 		'''A voter can only vote once'''
 		all_voters = set(frappe.get_all('Vote', pluck='voter'))
 		if self.voter in all_voters:
 			frappe.throw('You have already voted!')
+
+	def validate_mobile_no(self):
+		if self.voter_contact and len(self.voter_contact) != 10:
+			frappe.throw('Contact Number should have exactly 10 digits.', title='Invalid Contact No.')
 
 	def before_save(self):
 		self.set_voter_name()
@@ -34,7 +39,7 @@ class Vote(Document):
 		college = frappe.get_doc('College', self.college)
 		college.total_votes = college.total_votes + 1
 		college.save()
-	
+
 	def on_trash(self):
 		self.decrement_vote_count()
 
