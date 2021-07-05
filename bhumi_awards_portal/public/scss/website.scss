@@ -1,3 +1,4 @@
+/* hero section */
 .hero-image {
 	height: 100vh;
 	width: 100vw;
@@ -30,6 +31,7 @@
 	flex-direction: column;
 }
 
+/* criteria and about section */
 .feature-icon {
 	margin-right: 0.5rem;
 	width: 1.2rem;
@@ -37,19 +39,34 @@
 	object-fit: contain;
 }
 
-.process-section {
-	background-color: var(--light-green);
-}
-
-.process-image {
-	width: 400px;
-	height: 400px;
-}
-
+/* voting section */
 .vote-cta {
 	background-color: var(--light-orange);
 }
 
+/* process section */
+.process-section {
+	background-color: var(--light-green);
+
+	.process-card {
+		width: 75% !important;
+	}
+
+	.process-image {
+		width: 400px;
+		height: 400px;
+	}
+
+	.column {
+		padding: 1.25rem !important;
+	}
+
+	.row {
+		padding: 1.25rem !important;
+	}
+}
+
+/* college listing page */
 #filters-area .form-control {
 	border: 1px solid var(--orange);
 	background-color: white !important;
@@ -75,7 +92,7 @@
 	padding-top: 102px;
 }
 
-
+/* mobile view */
 @media (max-width: 767px) {
 	.hero-content {
 		padding: 20px;
@@ -83,5 +100,24 @@
 
 	.hero-subtitle {
 		margin-left: 0;
+	}
+
+	.process-section {
+		.process-card {
+			width: 100% !important;
+		}
+
+		.process-image {
+			width: 300px;
+			height: 300px;
+		}
+
+		.column {
+			padding: 1.25rem 0.25rem !important;
+		}
+
+		.row {
+			padding: 0.25rem !important;
+		}
 	}
 }
