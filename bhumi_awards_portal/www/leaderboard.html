@@ -6,18 +6,20 @@ title: Leaderboard
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<section id="leaderboard-header" class="section section-padding-top section-padding-bottom bg-light" data-section-template="Hero">
+
+<section id="leaderboard-header" class="section bg-light" data-section-idx="1" data-section-template="Hero with Right Image">
 	<div class="container">
-		<div class="hero">
+		<div class="hero-with-right-image">
 			<div class="hero-content">
-				<h1 class="hero-title">Leaderboard</h1>
-				<p class="hero-subtitle">
-					Checkout who is winning!
-				</p>
-				<div class="hero-buttons">
-					<a class="btn btn-lg btn-secondary" href="#leaderboard-section">Explore</a>
+				<div>
+					<h1 class="hero-title">Leaderboard</h1>
+					<p class="hero-subtitle">Checkout who is winning the Responsible Campus Awards!</p>
+					<div>
+						<a class="btn btn-lg btn-secondary" href="#college-listing">Explore</a>
+					</div>
 				</div>
 			</div>
+			<img alt="" class="image-with-blur hero-image image-loaded" data-src="/assets/bhumi_awards_portal/images/leaderboard.png" src="/assets/bhumi_awards_portal/images/leaderboard.png" height="2000" width="2000">
 		</div>
 	</div>
 </section>
