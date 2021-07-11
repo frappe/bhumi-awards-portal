@@ -59,7 +59,7 @@ title: Bhumi Awards
 	</div>
 </section>
 
-<section class="section process-section section-padding-top section-padding-bottom">
+<section id="process-section" class="section process-section section-padding-top section-padding-bottom">
 	<div class="container">
 		<div class="section-with-cards">
 			<h2 class="section-title">Process</h2>
@@ -119,7 +119,7 @@ title: Bhumi Awards
 	</div>
 </section>
 
-<section class="section section-padding-top section-padding-bottom bg-light">
+<section id="criteria-section" class="section section-padding-top section-padding-bottom bg-light">
 	<div class="container">
 		<div class="section-with-features">
 			<h2 class="section-title">Criteria</h2>
@@ -246,4 +246,10 @@ title: Bhumi Awards
 	</div>
 </section>
 
+{% endblock %}
+
+{% block script %}
+	<script>
+		$('.navbar').addClass('fixed-top');
+	</script>
 {% endblock %}

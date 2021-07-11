@@ -96,5 +96,8 @@ title: Leaderboard
 
 <!-- Add a refresh button to refresh the table -->
 {% block script %}
-		{{ include_script('leaderboard.bundle.js') }}
+	{{ include_script('leaderboard.bundle.js') }}
+	<script>
+		$('.navbar').addClass('fixed-top');
+	</script>
 {% endblock %}
