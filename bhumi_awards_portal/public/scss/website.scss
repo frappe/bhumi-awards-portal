@@ -59,12 +59,13 @@
 	background-color: var(--light-green);
 
 	.process-card {
-		width: 75% !important;
+		width: 80% !important;
+		align-items: center;
 	}
 
 	.process-image {
-		width: 400px;
-		height: 400px;
+		width: 350px;
+		height: 350px;
 	}
 
 	.column {

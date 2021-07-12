@@ -18,7 +18,7 @@
  "is_standard": 1,
  "label": "Bhumi",
  "links": [],
- "modified": "2021-06-22 13:49:13.139697",
+ "modified": "2021-07-12 23:50:37.414156",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Bhumi",
@@ -27,12 +27,12 @@
  "pin_to_top": 0,
  "shortcuts": [
   {
-   "color": "#449CF0",
+   "color": "#29CD42",
    "doc_view": "List",
-   "format": "{}",
+   "format": "{} Approved",
    "label": "College",
    "link_to": "College",
-   "stats_filter": "{}",
+   "stats_filter": "{\n    \"approval_status\": \"Approved\"\n}",
    "type": "DocType"
   },
   {
