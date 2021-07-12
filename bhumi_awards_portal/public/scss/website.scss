@@ -17,6 +17,14 @@
 		text-align: justify;
 		margin-left: 1rem;
 	}
+
+	.hero-content {
+		margin-top: 6rem !important;
+	}
+}
+
+#leaderboard-header .hero-content {
+	margin-top: 6rem !important;
 }
 
 .image-overlay {
@@ -31,10 +39,6 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-}
-
-.hero-content {
-	margin-top: 6rem !important;
 }
 
 /* criteria and about section */

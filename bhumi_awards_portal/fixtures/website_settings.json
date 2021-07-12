@@ -87,7 +87,7 @@
   "home_page": null,
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2021-07-11 23:43:13.427250",
+  "modified": "2021-07-12 22:53:21.148917",
   "name": "Website Settings",
   "navbar_search": 0,
   "navbar_template": null,
@@ -136,7 +136,7 @@
    },
    {
     "icon": null,
-    "label": "College Listings",
+    "label": "College Listing",
     "open_in_new_tab": 0,
     "parent": "Website Settings",
     "parent_label": null,
@@ -155,6 +155,17 @@
     "parenttype": "Website Settings",
     "right": 1,
     "url": "/leaderboard"
+   },
+   {
+    "icon": null,
+    "label": "College Registration",
+    "open_in_new_tab": 0,
+    "parent": "Website Settings",
+    "parent_label": null,
+    "parentfield": "top_bar_items",
+    "parenttype": "Website Settings",
+    "right": 1,
+    "url": "/college-registration"
    }
   ],
   "website_theme": "Bhumi Theme",

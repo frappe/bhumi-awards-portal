@@ -6,15 +6,20 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "details_section",
   "college_name",
   "location",
-  "total_votes"
+  "total_votes",
+  "column_break_3",
+  "description",
+  "column_break_4",
+  "created_via_web_form",
+  "approval_status"
  ],
  "fields": [
   {
    "fieldname": "college_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "College Name",
    "reqd": 1,
    "unique": 1
@@ -31,14 +36,52 @@
    "default": "0",
    "fieldname": "total_votes",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Total Votes",
    "non_negative": 1,
    "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Section Break",
+   "label": "Registration Approval"
+  },
+  {
+   "default": "0",
+   "fieldname": "created_via_web_form",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Created via Web Form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-25 19:24:00.759273",
+ "modified": "2021-07-12 23:02:11.727156",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
