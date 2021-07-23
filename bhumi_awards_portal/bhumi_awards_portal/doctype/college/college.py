@@ -6,8 +6,14 @@ from frappe.model.document import Document
 
 class College(Document):
 	def validate(self):
+		self.set_registered_by()
 		if not self.created_via_web_form:
 			self.approval_status = 'Approved'
+
+	def set_registered_by(self):
+		if not self.registered_by:
+			self.registered_by = frappe.session.user
+			self.registered_by_name = frappe.db.get_value('User', self.registered_by, 'full_name')
 
 	@staticmethod
 	def get_with_rank(limit=None, name_query=None):

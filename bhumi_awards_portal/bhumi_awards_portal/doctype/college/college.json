@@ -14,7 +14,11 @@
   "description",
   "column_break_4",
   "created_via_web_form",
-  "approval_status"
+  "approval_status",
+  "reason_for_rejection",
+  "column_break_5",
+  "registered_by",
+  "registered_by_name"
  ],
  "fields": [
   {
@@ -77,11 +81,35 @@
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "registered_by",
+   "fieldtype": "Link",
+   "label": "Registered By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "registered_by_name",
+   "fieldtype": "Data",
+   "label": "Registerer By (Name)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.approval_status === \"Rejected\";",
+   "fieldname": "reason_for_rejection",
+   "fieldtype": "Small Text",
+   "label": "Reason for Rejection",
+   "mandatory_depends_on": "eval:doc.approval_status === \"Rejected\";"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-12 23:02:11.727156",
+ "modified": "2021-07-23 13:51:08.184243",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
