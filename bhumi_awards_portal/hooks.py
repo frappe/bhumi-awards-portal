@@ -15,7 +15,8 @@ fixtures = [
     "Color",
     {"dt": "Website Theme", "filters": {"name": "Bhumi Theme"}},
     "Website Settings",
-    {"dt": "Role", "filters": {"name": "Voter"}}
+    {"dt": "Role", "filters": {"name": "Voter"}},
+    {"dt": "Web Page", "filters": {"name": "home"}}
 ]
 
 # Includes in <head>
@@ -50,7 +51,7 @@ brand_html = '<div><img src="/assets/bhumi_awards_portal/images/bhumi_logo.png">
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "index"
+home_page = "home"
 
 # website user home page (by Role)
 # role_home_page = {
