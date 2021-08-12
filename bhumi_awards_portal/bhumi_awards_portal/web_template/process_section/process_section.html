@@ -1,0 +1,24 @@
+<section id="process-section" class="section process-section section-padding-top section-padding-bottom">
+	<div class="container">
+		<h2 class="section-title"> {{ title }} </h2>
+		<p class="section-description"> {{ subtitle }} </p>
+		<div class="section-features mt-5">
+			<div class="row m-5">
+					{%- for step in process_steps -%}
+					<div class="col-lg-6 col-md-6 col-sm-12 p-5 column" align="center">
+						<div class="card h-100 shadow border-0 process-card">
+							<img src="{{ step.image }}" class="img-responsive card-img-top process-image" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">{{ step.title }}</h5>
+								<p class="card-text text-justify">
+									{{ step.description }}
+								</p>
+							</div>
+						</div>
+					</div>
+					{%- endfor -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
