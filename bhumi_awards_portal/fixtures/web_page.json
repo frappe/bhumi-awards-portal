@@ -123,7 +123,7 @@
   "meta_description": null,
   "meta_image": null,
   "meta_title": null,
-  "modified": "2021-08-22 11:22:55.285940",
+  "modified": "2021-08-22 11:25:55.285940",
   "name": "college-listing",
   "page_blocks": [
    {
@@ -137,7 +137,7 @@
     "parentfield": "page_blocks",
     "parenttype": "Web Page",
     "web_template": "Hero with Right Image",
-    "web_template_values": "{\"title\":\"College Listing\",\"subtitle\":\"Cast your vote for the most deserving college out of over 35,000 colleges!\",\"image\":\"/files/college-voting.png\",\"contain_image\":0,\"primary_action_label\":\"Explore\",\"primary_action\":\"#college-listing\"}"
+    "web_template_values": "{\"title\":\"College Listing\",\"subtitle\":\"Cast your vote for the most deserving college out of over 35,000 colleges!\",\"image\":\"/assets/bhumi_awards_portal/images/college-voting.png\",\"contain_image\":0,\"primary_action_label\":\"Explore\",\"primary_action\":\"#college-listing\"}"
    },
    {
     "add_bottom_padding": 0,
