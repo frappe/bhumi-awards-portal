@@ -7,7 +7,7 @@
 						<input type="text" class="form-control" id="input-name-search" placeholder="Search College">
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="form-group">
 						<select name="input-sort" id="input-sort" class="form-control">
 							<option value="total_votes" selected># of votes</option>
@@ -26,8 +26,9 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-md-1">
-					<button id="apply-button" class="btn btn-secondary mb-4">Apply</button>
+				<div class="col-md-2 d-flex flex-row">
+					<button id="apply-button" class="btn btn-secondary mr-3 mb-4">Apply</button>
+					<button id="clear-button" class="btn btn-default mb-4">Clear</button>
 				</div>
 			</div>
 		</div>
@@ -54,6 +55,7 @@
 	const collegeListings = document.getElementById("college-listings");
 	const loadMoreButton = document.getElementById("load-more-button");
 	const applyButton = document.getElementById("apply-button");
+	const clearButton = document.getElementById("clear-button");
 
 	// Global variables
 	let pageStart = 0;
@@ -83,6 +85,10 @@
 
 	loadMoreButton.addEventListener("click", (e) => {
 		loadNextPage();
+	});
+
+	clearButton.addEventListener("click", (e) => {
+		window.location.href = "/colleges"
 	});
 
 	function loadNextPage() {
