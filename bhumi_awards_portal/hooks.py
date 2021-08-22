@@ -16,7 +16,7 @@ fixtures = [
     {"dt": "Website Theme", "filters": {"name": "Bhumi Theme"}},
     "Website Settings",
     {"dt": "Role", "filters": {"name": "Voter"}},
-    {"dt": "Web Page", "filters": {"name": "home"}}
+    {"dt": "Web Page", "filters": {"name": ("in", ["home", "college-listing"])}}
 ]
 
 # Includes in <head>
