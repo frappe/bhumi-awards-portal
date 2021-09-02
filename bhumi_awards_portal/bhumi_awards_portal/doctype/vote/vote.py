@@ -20,6 +20,9 @@ class Vote(Document):
 		if self.voter_contact and len(self.voter_contact) != 10:
 			frappe.throw('Contact Number should have exactly 10 digits.', title='Invalid Contact No.')
 
+		if self.management_contact and len(self.management_contact) != 10:
+			frappe.throw('Contact Number should have exactly 10 digits.', title='Invalid Contact No.')
+
 	def before_save(self):
 		self.set_voter_name()
 

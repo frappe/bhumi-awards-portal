@@ -7,8 +7,16 @@
  "field_order": [
   "college_details_section",
   "college",
-  "column_break_2",
   "association_with_college",
+  "column_break_2",
+  "compulsory_volunteering",
+  "help_in_reaching_out",
+  "college_management_contact_person_details_section",
+  "management_name",
+  "management_email",
+  "data_8",
+  "management_contact",
+  "management_designation",
   "reason_for_nomination_section",
   "reason_for_nomination",
   "voter_details_section",
@@ -38,7 +46,7 @@
   {
    "allow_in_quick_entry": 1,
    "fieldname": "reason_for_nomination",
-   "fieldtype": "Long Text"
+   "fieldtype": "Small Text"
   },
   {
    "fieldname": "voter_contact",
@@ -83,11 +91,66 @@
    "fieldname": "college_details_section",
    "fieldtype": "Section Break",
    "label": "College Details"
+  },
+  {
+   "fieldname": "compulsory_volunteering",
+   "fieldtype": "Select",
+   "label": "Does this college have compulsory volunteering/community service hours?",
+   "options": "Yes\nNo\nDon't Know",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "help_in_reaching_out",
+   "fieldtype": "Select",
+   "label": "Can you help us reach out to the above mentioned college management to ensure the application form is filled?",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "fieldname": "college_management_contact_person_details_section",
+   "fieldtype": "Section Break",
+   "label": "College Management Contact Person Details",
+   "mandatory_depends_on": "eval:doc.help_in_reaching_out===\"Yes\""
+  },
+  {
+   "depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "fieldname": "management_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "eval:doc.help_in_reaching_out===\"Yes\""
+  },
+  {
+   "depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "fieldname": "management_email",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "mandatory_depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "options": "Email"
+  },
+  {
+   "depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "fieldname": "management_contact",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "mandatory_depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "options": "Phone"
+  },
+  {
+   "depends_on": "eval:doc.help_in_reaching_out===\"Yes\"",
+   "fieldname": "management_designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "mandatory_depends_on": "eval:doc.help_in_reaching_out===\"Yes\""
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-25 16:37:45.265107",
+ "modified": "2021-09-02 22:58:49.800559",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Vote",
