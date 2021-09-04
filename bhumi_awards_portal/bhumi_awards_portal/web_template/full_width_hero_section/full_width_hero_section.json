@@ -15,10 +15,26 @@
    "fieldtype": "Text",
    "label": "Subtitle",
    "reqd": 1
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "cta_url",
+   "fieldtype": "Data",
+   "label": "CTA URL",
+   "reqd": 0
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "cta_label",
+   "fieldtype": "Data",
+   "label": "CTA Label",
+   "reqd": 0
   }
  ],
  "idx": 0,
- "modified": "2021-08-11 11:21:15.249340",
+ "modified": "2021-09-02 23:35:00.226789",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Full Width Hero Section",

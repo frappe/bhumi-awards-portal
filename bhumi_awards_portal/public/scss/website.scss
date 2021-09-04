@@ -41,6 +41,16 @@
 	flex-direction: column;
 }
 
+/* section with two CTAs */
+.cta-col {
+	text-align: center;
+}
+
+.cta-icon {
+	margin-bottom: 2rem;
+	object-fit: contain;
+}
+
 /* criteria and about section */
 .feature-icon {
 	margin-right: 0.5rem;

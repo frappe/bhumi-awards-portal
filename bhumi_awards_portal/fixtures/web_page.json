@@ -3,7 +3,7 @@
   "breadcrumbs": null,
   "content_type": "Page Builder",
   "context_script": null,
-  "css": ".section-feature div {\n    text-align: center;\n}\n\n.section-cta {\n    background-color: var(--light-orange);\n}",
+  "css": ".section-feature div {\n    text-align: center;\n}\n\n.section-cta {\n    background-color: var(--light-orange);\n}\n\n.section-with-two-ctas {\n    background-color: var(--light-orange);\n}",
   "docstatus": 0,
   "doctype": "Web Page",
   "dynamic_route": 0,
@@ -20,7 +20,7 @@
   "meta_description": null,
   "meta_image": null,
   "meta_title": null,
-  "modified": "2021-08-22 11:20:27.065477",
+  "modified": "2021-09-04 13:27:55.219097",
   "name": "home",
   "page_blocks": [
    {
@@ -34,7 +34,20 @@
     "parentfield": "page_blocks",
     "parenttype": "Web Page",
     "web_template": "Full Width Hero Section",
-    "web_template_values": "{\"title\":\"Responsible Campus Awards\",\"subtitle\":\"India's first-ever awards to recognize socially responsible colleges. One-of-its-kind attempt to learn from and strengthen Indian college's focus on building the future change-makers of this country.\"}"
+    "web_template_values": "{\"title\":\"Responsible Campus Awards\",\"subtitle\":\"India's first-ever awards to recognize socially responsible colleges. One-of-its-kind attempt to learn from and strengthen Indian college's focus on building the future change-makers of this country.\",\"cta_url\":\"#explore-section\",\"cta_label\":\"Explore\"}"
+   },
+   {
+    "add_bottom_padding": 0,
+    "add_container": 0,
+    "add_shade": 0,
+    "add_top_padding": 0,
+    "css_class": "section-with-two-ctas",
+    "hide_block": 0,
+    "parent": "home",
+    "parentfield": "page_blocks",
+    "parenttype": "Web Page",
+    "web_template": "Section with Two CTAs",
+    "web_template_values": "{\"first_section_description\":\"If you belong to any institution, register for BRECSA and get recognized for your exceptional work towards social change.\", \"first_section_image\":\"/assets/bhumi_awards_portal/images/registration.png\", \"first_section_cta_label\":\"Register Now\",\"first_section_cta_url\":\"/college-registration\",\"second_section_description\":\"If you are a student/alumni/parent, cast your vote for the most deserving college to increase their chances of winning!\", \"second_section_image\":\"/assets/bhumi_awards_portal/images/vote-now.png\", \"second_section_cta_label\":\"Vote Now\",\"second_section_cta_url\":\"/colleges\"}"
    },
    {
     "add_bottom_padding": 1,
@@ -123,7 +136,7 @@
   "meta_description": null,
   "meta_image": null,
   "meta_title": null,
-  "modified": "2021-08-22 11:25:55.285940",
+  "modified": "2021-08-22 11:26:55.285940",
   "name": "college-listing",
   "page_blocks": [
    {
