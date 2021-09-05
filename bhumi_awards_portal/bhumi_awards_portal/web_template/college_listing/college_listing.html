@@ -234,8 +234,7 @@
 			let title = eval("`" + element.getAttribute("data-message-title") + "`");
 			message = message.replace("[object Object]", college);
 
-			let url = get_base_url();
-			let url_param = url + "/login?redirect-to=/vote?new=1#" + encodeURIComponent(college);
+			let url_param = get_url_param(college)
 
 			navigator.share({
 				title: title,
@@ -249,8 +248,8 @@
 
 	$("#social_media_modal").on("show.bs.modal", function(event) {
 		let college = $(event.relatedTarget).data("college");
-		let url = get_base_url();
-		let url_param = url + "/login?redirect-to=/vote?new=1#" + encodeURIComponent(college);
+		let url_param = get_url_param(college);
+
 		let message = eval("`" + $(this).find(".modal-body").data("message-text") + "`");
 		let title = eval("`" + $(this).find(".modal-body").data("message-title") + "`");
 
@@ -290,6 +289,16 @@
 		if (url.substr(url.length-1, 1)=='/')
 			url = url.substr(0, url.length-1);
 		return url;
+	}
+
+	function get_url_param(college) {
+		let url = get_base_url();
+		const redirectPayload = new URLSearchParams({
+			"redirect-to": "/vote?new=1#" + encodeURIComponent(college)
+		});
+
+		const redirect_to = redirectPayload.toString();
+		return `${url}/login?${redirect_to}`;
 	}
 
 	function toggleLoadButton(visible = true) {
