@@ -136,7 +136,7 @@
   "meta_description": null,
   "meta_image": null,
   "meta_title": null,
-  "modified": "2021-08-22 11:26:55.285940",
+  "modified": "2021-09-05 16:55:34.809347",
   "name": "college-listing",
   "page_blocks": [
    {
@@ -163,7 +163,7 @@
     "parentfield": "page_blocks",
     "parenttype": "Web Page",
     "web_template": "College Listing",
-    "web_template_values": null
+    "web_template_values": "{\"social_media_title\":\"Responsible Campus Awards\",\"social_media_message\":\"${college}: Vote for this Socially Responsible College now!\"}"
    },
    {
     "add_bottom_padding": 1,

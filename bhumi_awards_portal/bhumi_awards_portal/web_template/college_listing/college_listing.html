@@ -50,6 +50,40 @@
 	</div>
 </section>
 
+<div class="modal fade" id="social_media_modal" tabindex="-1" role="dialog" aria-labelledby="social_media_modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content col-12">
+			<div class="modal-header">
+				<h5 class="modal-title">Share</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+			</div>
+			<div class="modal-body" data-message-title="{{ social_media_title }}" data-message-text="{{ social_media_message }}">
+				<div class="icon-container d-flex">
+					<div class="social-link">
+						<a id="fb">
+							<img class="img-social-icon" src="/assets/bhumi_awards_portal/images/facebook.png">
+							<p>Facebook</p>
+						</a>
+					</div>
+
+					<div class="social-link">
+						<a id="twitter">
+							<img class="img-social-icon" src="/assets/bhumi_awards_portal/images/twitter.png">
+							<p>Twitter</p>
+						</a>
+					</div>
+
+					<div class="social-link">
+						<a id="whatsapp">
+							<img class="img-social-icon" src="/assets/bhumi_awards_portal/images/whatsapp.png">
+							<p>Whatsapp</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
 	// DOM elements
 	const collegeListings = document.getElementById("college-listings");
@@ -103,6 +137,7 @@
 			freeze: true,
 			callback: ({ message }) => {
 				appendToListings(message);
+				showShareButtons();
 			},
 		});
 		pageStart += pageLimit;
@@ -151,7 +186,22 @@
 							</span>
 						</div>
 
-						<a href="/login?${redirect_to}" class="btn btn-primary">Vote Now</a>
+						<div class="d-flex actions">
+							<a href="/login?${redirect_to}" class="btn btn-sm btn-primary">Vote Now</a>
+
+							<div class="webShareIcons ml-2">
+								<a id="webShare" class="btn btn-sm btn-primary btn-social" onClick="share(this);" data-college="${college.name}" data-message-title="{{ social_media_title }}" data-message-text="{{ social_media_message }}">
+									<img class="share-icon" src="/assets/bhumi_awards_portal/images/share.png">
+								</a>
+							</div>
+							<div class="sharerUrlIcons ml-2">
+								<div class="social-icons" id="s-icons">
+									<a class="btn btn-primary btn-sm btn-social" id="btn-share" data-toggle="modal" data-target="#social_media_modal" data-college="${college.name}">
+										<img class="share-icon" src="/assets/bhumi_awards_portal/images/share.png">
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			`
@@ -162,6 +212,84 @@
 			cardElement.innerHTML = cardHTML;
 			collegeListings.append(cardElement);
 		}
+	}
+
+	function showShareButtons() {
+		// share colleges
+		if (navigator.share) {
+			document.querySelectorAll('.sharerUrlIcons').forEach(function(el) {
+				el.style.display = 'none';
+			});
+		} else {
+			document.querySelectorAll('.webShareIcons').forEach(function(el) {
+				el.style.display = 'none';
+			});
+		}
+	}
+
+	function share(element) {
+		if (navigator.share) {
+			let college = element.getAttribute("data-college");
+			let message = eval("`" + element.getAttribute("data-message-text") + "`");
+			let title = eval("`" + element.getAttribute("data-message-title") + "`");
+			message = message.replace("[object Object]", college);
+
+			let url = get_base_url();
+			let url_param = url + "/login?redirect-to=/vote?new=1#" + encodeURIComponent(college);
+
+			navigator.share({
+				title: title,
+				text: message,
+				url: url_param,
+			})
+			.then(() => console.log("Successfully shared"))
+			.catch((error) => console.log("Error sharing", error));
+		}
+	}
+
+	$("#social_media_modal").on("show.bs.modal", function(event) {
+		let college = $(event.relatedTarget).data("college");
+		let url = get_base_url();
+		let url_param = url + "/login?redirect-to=/vote?new=1#" + encodeURIComponent(college);
+		let message = eval("`" + $(this).find(".modal-body").data("message-text") + "`");
+		let title = eval("`" + $(this).find(".modal-body").data("message-title") + "`");
+
+		// Facebook
+		let params = new URLSearchParams({
+			"u": url_param,
+			"quote": message
+		});
+		const fb_payload = params.toString();
+
+		let fb_url = "https://www.facebook.com/sharer/sharer.php?" + fb_payload;
+		$(this).find(".modal-body #fb").attr("onClick", `window.open('${fb_url}')`);
+
+		// Twitter
+		params = new URLSearchParams({
+			"url": url_param,
+			"text": message
+		});
+		const twitter_payload = params.toString();
+
+		let twitter_url = "https://twitter.com/intent/tweet?" + twitter_payload;
+		$(this).find(".modal-body #twitter").attr("onClick", `window.open('${twitter_url}')`);
+
+		// Whatsapp
+		message += "\n" + `Voting Link: ${url_param}`;
+		params = new URLSearchParams({
+			"text": message,
+		});
+		const whatsapp_payload = params.toString();
+
+		let whatsapp_url = "https://wa.me/?" + whatsapp_payload;
+		$(this).find(".modal-body #whatsapp").attr("onClick", `window.open('${whatsapp_url}')`);
+	});
+
+	function get_base_url() {
+		let url = window.location.origin;
+		if (url.substr(url.length-1, 1)=='/')
+			url = url.substr(0, url.length-1);
+		return url;
 	}
 
 	function toggleLoadButton(visible = true) {

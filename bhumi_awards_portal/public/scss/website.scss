@@ -97,6 +97,18 @@
 	background-color: var(--light-green);
 }
 
+.img-social-icon {
+	width: 40px;
+	height: 40px;
+}
+
+.social-link {
+	margin-top: 2px;
+	width: 200px;
+	font-size: small;
+	text-align: center;
+}
+
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
 	position: fixed;
