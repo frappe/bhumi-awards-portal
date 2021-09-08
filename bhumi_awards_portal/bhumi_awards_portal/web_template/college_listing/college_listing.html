@@ -216,7 +216,7 @@
 
 	function showShareButtons() {
 		// share colleges
-		if (navigator.share) {
+		if (navigator.share && frappe.is_mobile()) {
 			document.querySelectorAll('.sharerUrlIcons').forEach(function(el) {
 				el.style.display = 'none';
 			});
