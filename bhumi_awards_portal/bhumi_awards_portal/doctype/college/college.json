@@ -18,7 +18,16 @@
   "reason_for_rejection",
   "column_break_5",
   "registered_by",
-  "registered_by_name"
+  "registered_by_name",
+  "other_details_section",
+  "how_do_you_get_to_know_of_the_college",
+  "city",
+  "college_point_of_contact_name",
+  "column_break_18",
+  "contact_number_of_college_point_of_contact",
+  "email_id_of_the_college_point_of_conatct",
+  "select_category_for_nomination",
+  "additional_remarks"
  ],
  "fields": [
   {
@@ -33,8 +42,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Location",
-   "options": "Location",
-   "reqd": 1
+   "options": "Location"
   },
   {
    "default": "0",
@@ -105,14 +113,67 @@
   {
    "fieldname": "column_break_5",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "how_do_you_get_to_know_of_the_college",
+   "fieldtype": "Select",
+   "label": "How do you get to know of the College",
+   "options": "Student\nAlumni\nPublic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "college_point_of_contact_name",
+   "fieldtype": "Data",
+   "label": "College Point of Contact name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_number_of_college_point_of_contact",
+   "fieldtype": "Data",
+   "label": "Contact Number of College Point of Contact",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id_of_the_college_point_of_conatct",
+   "fieldtype": "Data",
+   "label": "Email Id Of The College point Of Conatct",
+   "options": "Email"
+  },
+  {
+   "fieldname": "select_category_for_nomination",
+   "fieldtype": "Data",
+   "label": "Select Category For Nomination",
+   "reqd": 1
+  },
+  {
+   "fieldname": "additional_remarks",
+   "fieldtype": "Small Text",
+   "label": "Additional remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-23 13:51:08.184243",
+ "modified": "2023-03-08 14:26:35.608027",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -143,5 +204,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

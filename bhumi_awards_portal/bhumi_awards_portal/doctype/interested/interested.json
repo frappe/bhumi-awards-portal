@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-08 14:16:14.698037",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "college_name",
+  "state",
+  "college_complete_address",
+  "college_representative_name",
+  "representative_designation_with_department",
+  "mobile_number",
+  "whats_app_number",
+  "official_college_email_id",
+  "college_representative_official_email_id",
+  "i_agreee"
+ ],
+ "fields": [
+  {
+   "fieldname": "college_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "College Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "MH\nTN\nKarnataka\nDelhi\nPunjab",
+   "reqd": 1
+  },
+  {
+   "fieldname": "college_complete_address",
+   "fieldtype": "Small Text",
+   "label": "College complete Address"
+  },
+  {
+   "fieldname": "college_representative_name",
+   "fieldtype": "Data",
+   "label": "College Representative name"
+  },
+  {
+   "fieldname": "representative_designation_with_department",
+   "fieldtype": "Data",
+   "label": "Representative Designation with Department"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "whats_app_number",
+   "fieldtype": "Data",
+   "label": "Whats App Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "official_college_email_id",
+   "fieldtype": "Data",
+   "label": "Official College Email ID",
+   "options": "Email"
+  },
+  {
+   "fieldname": "college_representative_official_email_id",
+   "fieldtype": "Data",
+   "label": "College Representative Official Email ID",
+   "options": "Email"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_agreee",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "I Agreee",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-08 14:16:14.698037",
+ "modified_by": "Administrator",
+ "module": "Bhumi Awards Portal",
+ "name": "Interested",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

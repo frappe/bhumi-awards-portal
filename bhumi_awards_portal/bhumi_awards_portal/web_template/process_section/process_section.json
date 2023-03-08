@@ -1,6 +1,7 @@
 {
+ "__islocal": true,
  "__unsaved": 1,
- "creation": "2021-08-11 11:47:10.229819",
+ "creation": "2023-03-07 21:46:24.218493",
  "docstatus": 0,
  "doctype": "Web Template",
  "fields": [
@@ -48,7 +49,7 @@
   }
  ],
  "idx": 0,
- "modified": "2021-08-11 13:04:16.292531",
+ "modified": "2023-03-07 21:46:24.218493",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Process Section",

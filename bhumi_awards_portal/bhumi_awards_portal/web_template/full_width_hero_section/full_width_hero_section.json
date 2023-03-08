@@ -1,23 +1,25 @@
 {
+ "__islocal": true,
  "__unsaved": 1,
- "creation": "2021-08-11 11:16:52.018000",
+ "creation": "2023-03-07 21:46:24.224702",
  "docstatus": 0,
  "doctype": "Web Template",
  "fields": [
   {
+   "__unsaved": 1,
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title",
    "reqd": 1
   },
   {
+   "__unsaved": 1,
    "fieldname": "subtitle",
    "fieldtype": "Text",
    "label": "Subtitle",
    "reqd": 1
   },
   {
-   "__islocal": 1,
    "__unsaved": 1,
    "fieldname": "cta_url",
    "fieldtype": "Data",
@@ -25,7 +27,6 @@
    "reqd": 0
   },
   {
-   "__islocal": 1,
    "__unsaved": 1,
    "fieldname": "cta_label",
    "fieldtype": "Data",
@@ -34,7 +35,7 @@
   }
  ],
  "idx": 0,
- "modified": "2021-09-02 23:35:00.226789",
+ "modified": "2023-03-07 21:46:24.224702",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Full Width Hero Section",

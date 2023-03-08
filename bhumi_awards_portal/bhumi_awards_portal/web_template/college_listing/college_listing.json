@@ -1,6 +1,7 @@
 {
+ "__islocal": true,
  "__unsaved": 1,
- "creation": "2021-08-21 23:45:25.490465",
+ "creation": "2023-03-07 21:46:24.206461",
  "docstatus": 0,
  "doctype": "Web Template",
  "fields": [
@@ -20,7 +21,7 @@
   }
  ],
  "idx": 0,
- "modified": "2021-09-05 16:54:50.180507",
+ "modified": "2023-03-07 21:46:24.206461",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "College Listing",

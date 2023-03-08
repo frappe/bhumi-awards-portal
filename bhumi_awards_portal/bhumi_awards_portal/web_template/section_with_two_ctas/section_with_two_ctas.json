@@ -1,6 +1,6 @@
 {
  "__unsaved": 1,
- "creation": "2021-09-02 23:38:24.634531",
+ "creation": "2023-03-07 21:46:24.196747",
  "docstatus": 0,
  "doctype": "Web Template",
  "fields": [
@@ -11,8 +11,6 @@
    "reqd": 0
   },
   {
-   "__islocal": 1,
-   "__unsaved": 1,
    "fieldname": "first_section_image",
    "fieldtype": "Attach Image",
    "label": "First Section Image",
@@ -37,14 +35,14 @@
    "reqd": 0
   },
   {
-   "__islocal": 1,
-   "__unsaved": 1,
    "fieldname": "second_section_image",
    "fieldtype": "Attach Image",
    "label": "Second Section Image",
    "reqd": 0
   },
   {
+   "__islocal": 1,
+   "__unsaved": 1,
    "fieldname": "second_section_cta_label",
    "fieldtype": "Data",
    "label": "Second Section CTA Label",
@@ -55,10 +53,40 @@
    "fieldtype": "Data",
    "label": "Second Section CTA URL",
    "reqd": 0
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "third_section_description",
+   "fieldtype": "Small Text",
+   "label": "Third Section Description",
+   "reqd": 0
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "third_section_image",
+   "fieldtype": "Attach Image",
+   "label": "Third Section Image",
+   "reqd": 0
+  },
+  {
+   "fieldname": "third_section_cta_label",
+   "fieldtype": "Data",
+   "label": "Third Section CTA Label",
+   "reqd": 0
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "third_section_cta_url",
+   "fieldtype": "Data",
+   "label": "Third Section CTA URL",
+   "reqd": 0
   }
  ],
- "idx": 0,
- "modified": "2021-09-04 13:30:02.283470",
+ "idx": 1,
+ "modified": "2023-03-08 10:07:39.111515",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "Section with Two CTAs",

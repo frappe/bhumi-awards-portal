@@ -1,11 +1,12 @@
 {
  "__islocal": true,
  "__unsaved": 1,
- "creation": "2023-03-07 21:46:24.211867",
+ "creation": "2023-03-08 12:28:35.326494",
  "docstatus": 0,
  "doctype": "Web Template",
  "fields": [
   {
+   "__islocal": 1,
    "__unsaved": 1,
    "fieldname": "title",
    "fieldtype": "Data",
@@ -13,13 +14,15 @@
    "reqd": 0
   },
   {
+   "__islocal": 1,
    "__unsaved": 1,
    "fieldname": "subtitle",
-   "fieldtype": "Text",
+   "fieldtype": "Data",
    "label": "Subtitle",
    "reqd": 0
   },
   {
+   "__islocal": 1,
    "__unsaved": 1,
    "default": "3",
    "fieldname": "columns",
@@ -29,13 +32,23 @@
    "reqd": 0
   },
   {
+   "__islocal": 1,
    "__unsaved": 1,
-   "fieldname": "features",
+   "fieldname": "videos",
    "fieldtype": "Table Break",
-   "label": "Features",
+   "label": "Videos",
    "reqd": 0
   },
   {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "youtube_id",
+   "fieldtype": "Data",
+   "label": "YouTube Video ID",
+   "reqd": 0
+  },
+  {
+   "__islocal": 1,
    "__unsaved": 1,
    "fieldname": "title",
    "fieldtype": "Data",
@@ -43,32 +56,19 @@
    "reqd": 0
   },
   {
+   "__islocal": 1,
    "__unsaved": 1,
    "fieldname": "content",
    "fieldtype": "Small Text",
    "label": "Content",
    "reqd": 0
-  },
-  {
-   "__unsaved": 1,
-   "fieldname": "url",
-   "fieldtype": "Data",
-   "label": "URL",
-   "reqd": 0
-  },
-  {
-   "__unsaved": 1,
-   "fieldname": "icon",
-   "fieldtype": "Attach Image",
-   "label": "Icon",
-   "reqd": 0
   }
  ],
  "idx": 0,
- "modified": "2023-03-07 21:46:24.211867",
+ "modified": "2023-03-08 12:28:35.326494",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
- "name": "Criteria Section",
+ "name": "Section with Videos Bhumi",
  "owner": "Administrator",
  "standard": 1,
  "template": "",
