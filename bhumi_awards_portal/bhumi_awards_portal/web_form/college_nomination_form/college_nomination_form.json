@@ -20,7 +20,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-03-08 14:31:54.490158",
+ "modified": "2023-03-14 13:35:32.406978",
  "modified_by": "Administrator",
  "module": "Bhumi Awards Portal",
  "name": "college-nomination-form",
@@ -111,11 +111,12 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "select_category_for_nomination",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "hidden": 0,
    "label": "Select Category For Nomination",
    "max_length": 0,
    "max_value": 0,
+   "options": "Best Volunteer Engagement\nBest Social Initiative\nMost Eco-Friendly Campus\nMost Active Social Club\nMost Socially Responsible Staff\nMost Socially Responsible Student Change Driver",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
