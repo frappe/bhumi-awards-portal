@@ -1,11 +1,11 @@
-<section id="process-section" class="section process-section section-padding-top section-padding-bottom">
+<section id="process-section" class="section section-padding-top section-padding-bottom" style="background-color: var(--light-green);">
 	<div class="container">
 		<h2 class="section-title"> {{ title }} </h2>
 		<p class="section-description"> {{ subtitle }} </p>
 		<div class="section-features mt-5">
 			<div class="row m-5">
 					{%- for step in process_steps -%}
-					<div class="col-lg-6 col-md-6 col-sm-12 p-5 column" align="center">
+					<div class="col-lg-3 col-md-3 col-sm-12 p-2 column" align="center">
 						<div class="card h-100 shadow border-0 process-card">
 							<img src="{{ step.image }}" class="img-responsive card-img-top process-image" alt="...">
 							<div class="card-body">

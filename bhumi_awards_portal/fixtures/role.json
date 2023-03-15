@@ -1,7 +1,6 @@
 [
  {
   "bulk_actions": 0,
-  "chat": 0,
   "dashboard": 0,
   "desk_access": 0,
   "disabled": 0,
@@ -14,9 +13,6 @@
   "modified": "2021-06-14 13:25:14.417759",
   "name": "Voter",
   "notifications": 0,
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
   "restrict_to_domain": null,
   "role_name": "Voter",
   "search_bar": 0,

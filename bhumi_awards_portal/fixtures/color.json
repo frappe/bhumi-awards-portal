@@ -4,19 +4,13 @@
   "docstatus": 0,
   "doctype": "Color",
   "modified": "2021-06-07 20:01:48.446189",
-  "name": "Bhumi Green",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null
+  "name": "Bhumi Green"
  },
  {
   "color": "#E28B22",
   "docstatus": 0,
   "doctype": "Color",
   "modified": "2021-06-07 20:03:53.251091",
-  "name": "Bhumi Orange",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null
+  "name": "Bhumi Orange"
  }
 ]
