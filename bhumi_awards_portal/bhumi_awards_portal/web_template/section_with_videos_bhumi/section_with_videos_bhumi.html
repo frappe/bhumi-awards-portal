@@ -9,16 +9,24 @@
 	<div class="" data-columns="{{ columns or 3 }}">
 		{%- for video in videos -%}
 		<div class="section-feature">
-            <div class="section-video-wrapper" data-youtube-id="{{ video.youtube_id }}" style="width: 100%;">
-                <img class="video-thumbnail" src="https://i.ytimg.com/vi/{{ video.youtube_id }}/sddefault.jpg">
-            </div>
-            {%- if video.title -%}
-            <h4 class="feature-title mt-0">{{ video.title }}</h4>
-            {%- endif -%}
-            {%- if video.content -%}
-            <p class="feature-content">{{ video.content }}</p>
-            {%- endif -%}
-    </div>
+			<div class="section-video-wrapper" data-youtube-id="{{ video.youtube_id }}"
+				style="width: 100%;position:relative;">
+				<img class="video-thumbnail" src="https://i.ytimg.com/vi/{{ video.youtube_id }}/sddefault.jpg">
+				<img class="hideEle" style="position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);"
+					src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="15%" />
+			</div>
+			{%- if video.title -%}
+			<h4 class="feature-title mt-0">{{ video.title }}</h4>
+			{%- endif -%}
+			{%- if video.content -%}
+			<p class="feature-content">{{ video.content }}</p>
+			{%- endif -%}
+		</div>
 		{%- endfor -%}
-	</div> 
+	</div>
 </div>
+<script>
+	$(".section-video-wrapper").click(function () {
+		$(".hideEle").hide();
+	});
+</script>
