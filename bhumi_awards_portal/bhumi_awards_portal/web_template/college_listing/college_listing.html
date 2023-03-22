@@ -122,7 +122,7 @@
 	});
 
 	clearButton.addEventListener("click", (e) => {
-		window.location.href = "/colleges"
+		window.location.href = "/college_list"
 	});
 
 	function loadNextPage() {
@@ -153,7 +153,7 @@
 
 		for (let college of collegeList) {
 			const redirectPayload = new URLSearchParams({
-				"redirect-to": "/vote?new=1#" + encodeURIComponent(college.name),
+				"redirect-to": "/voting?new=1#" + encodeURIComponent(college.name),
 			});
 
 			const redirect_to = redirectPayload.toString();
