@@ -31,8 +31,13 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "State",
-   "options": "MH\nTN\nKarnataka\nDelhi\nPunjab",
+   "options": "Andhra Pradesh\nArunachal Pradesh\nAssam\nBihar\nChhattisgarh\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJharkhand\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nManipur\nMeghalaya\nMizoram\nNagaland\nOdisha\nPunjab\nRajasthan\nSikkim\nTamil Nadu\nTelangana\nTripura\nUttar Pradesh\nUttarakhand\nWest Bengal\nAndaman and Nicobar Islands\nChandigarh\nDadra and Nagar Haveli and Daman and Diu\nThe Government of NCT of Delhi\nLakshadweep\nPuducherry\nLadakh",
    "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Small Text",
+   "label": "City"
   },
   {
    "fieldname": "college_complete_address",
