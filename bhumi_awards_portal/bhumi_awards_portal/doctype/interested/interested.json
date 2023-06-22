@@ -9,6 +9,7 @@
  "field_order": [
   "college_name",
   "state",
+  "city",
   "college_complete_address",
   "college_representative_name",
   "representative_designation_with_department",
