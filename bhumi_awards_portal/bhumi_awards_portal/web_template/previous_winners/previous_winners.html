@@ -1,0 +1,79 @@
+<section class="container mb-5">
+    <!-- Header Section with Logo -->
+    <div class="text-center">
+        {% set temp = frappe.get_doc("Previous Winners Settings").banner_image%}
+        <img src="{{temp}}"
+            alt="Your Logo" class="img-fluid" width="100%">
+    </div>
+</section>
+
+<section class="container">
+    <!-- Year-wise Collapsible Section -->
+    <div class="accordion" id="yearCollapsible">
+        {% for location in frappe.get_all('Previous Winners', fields=['name','for_id'], order_by="name") %}
+        <div class="card">
+            <!-- {% set temp = loop.index %} -->
+            <!-- {% set temp2 = location['for_id'] %} -->
+            {%if loop.index ==1%}
+            <div class="card-header" id="year1Header">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span>{{ location['name'] }}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span>Organization Name</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span>Category</span>
+                    </div>
+                </div>
+                <button class="btn btn-link float-right" type="button" data-toggle="collapse"
+                    data-target="#id1" aria-controls="year1Content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                </button>
+            </div>
+            <div id="id1" class="collapse show" aria-labelledby="year1Header" data-parent="#yearCollapsible">
+                {% else %}
+                <div class="card-header" id="year1Header">
+                    <span>{{ location['name'] }}</span>
+                    <button class="btn btn-link float-right" type="button" data-toggle="collapse"
+                        data-target="#{{location['for_id']}}" aria-controls="year1Content">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="{{location['for_id']}}" class="collapse" aria-labelledby="year1Header"
+                    data-parent="#yearCollapsible">
+                    {% endif %}
+                    <div class="card-body">
+                        {% for item in frappe.get_all('Previous Winners Details',
+                        filters={"parent":location['name']},fields=['name','winner_organization_name','category','image'],
+                        order_by="name") %}
+                        <div class="row">
+                            <!-- Winner 1 -->
+                            <div class="col-md-4">
+                                <img src="{{item.image}}" alt="Winner 1" class="img-fluid mb-1" width="50rem" height="50rem">
+                            </div>
+                            <div class="col-md-4">
+                                {{item['winner_organization_name']}}
+                            </div>
+                            <div class="col-md-4">
+                                {{item['category']}}
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+</section>
